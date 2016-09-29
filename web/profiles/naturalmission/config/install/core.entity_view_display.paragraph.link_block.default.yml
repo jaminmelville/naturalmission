@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_block.field_link_block_description
+    - field.field.paragraph.link_block.field_link_block_image
+    - field.field.paragraph.link_block.field_link_block_link
+    - image.style.extra_large
+    - paragraphs.paragraphs_type.link_block
+  module:
+    - image
+    - link
+id: paragraph.link_block.default
+targetEntityType: paragraph
+bundle: link_block
+mode: default
+content:
+  field_link_block_description:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_link_block_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: extra_large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_link_block_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+hidden:
+  created: true
+  uid: true

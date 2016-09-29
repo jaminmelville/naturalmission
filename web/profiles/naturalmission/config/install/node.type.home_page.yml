@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+    module:
+        - menu_ui
+third_party_settings:
+    menu_ui:
+        available_menus:
+            - main
+        parent: 'main:'
+_core:
+    default_config_hash: Ef5izQo-R9Lcx15calTKzjL8-5PBirdSKLOOO1nQ2DQ
+name: 'Home Page'
+type: home_page
+description: 'This is a page that can be used for the front of the site.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.storage.node.field_home_page_about_text
+        - node.type.home_page
+    module:
+        - text
+id: node.home_page.field_home_page_about_text
+field_name: field_home_page_about_text
+entity_type: node
+bundle: home_page
+label: About
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

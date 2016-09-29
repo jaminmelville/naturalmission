@@ -1,0 +1,195 @@
+@import 'foundation-sites/scss/foundation';
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.6.3/fonts";
+@import 'font-awesome/scss/font-awesome';
+@import 'settings';
+/// include all modules of foundation
+
+@include foundation-everything(true);
+$color1: #ffffff;
+$color2: #444444;
+$color3: #fdf8af;
+$color4: #21c3ff;
+body {
+    background-image: url('/themes/custom/naturalmission/media/45-degree-fabric-dark.png');
+}
+
+p {
+    text-align: justify;
+}
+
+video {
+    object-fit: cover;
+}
+.layout-content {
+    width: 100%;
+}
+.page {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        margin: 10em 0;
+        width: 100%;
+
+        &--no-top-margin {
+            margin-top: 0;
+        }
+        &--no-bottom-margin {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size: 5em;
+        font-family: 'Conv_cafeandbrewery';
+    }
+}
+
+.full-screen {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+
+    &__content {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.site-heading {
+    font-family: sans-serif;
+    text-align: right;
+    padding-right: 4em;
+    background-color: rgba(0, 0, 0, 0.26);
+    position: relative;
+    font-family: 'Conv_cafeandbrewery';
+
+    &__title {
+        color: #fff0c5;
+        font-size: 5em;
+    }
+
+    &__subtitle {
+        color: #fff0c5;
+        margin-top: -1.8em;
+        letter-spacing: 0.41em;
+        font-size: 1.5em;
+        margin-right: -0.2em;
+    }
+}
+
+.menu__wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: black;
+    display: flex;
+    text-transform: uppercase;
+}
+
+.about__profile {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#googleMap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.column.image {
+    padding-top: 33%;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 1s;
+        filter: grayscale(0%);
+    }
+    &:hover {
+        img {
+            filter: grayscale(100%);
+        }
+    }
+}
+
+.resource {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    transition: background-color 1s;
+
+    &__content {
+        width: 100%;
+    }
+
+    &__name {
+        font-size: 3em;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Conv_cafeandbrewery';
+    }
+
+    &__description {
+        font-size: 1.5em;
+        color: peachpuff;
+        padding: 1em;
+        display: none;
+    }
+
+    &__link {
+        display: none;
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.67);
+        .resource__description,
+        .resource__link {
+            display: block;
+        }
+    }
+}
+
+.map-overlay {
+    z-index: 1;
+    position: relative;
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.59);
+}
+
+.service {
+
+    &__title {
+        text-align: center;
+        font-size: 2em;
+    }
+    &__text {
+        margin-bottom: 2em;
+    }
+}
+.contact__option {
+    padding: 0.4em;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 0.6em 0em 3em;
+    border: 1px dashed $primary-color;
+}

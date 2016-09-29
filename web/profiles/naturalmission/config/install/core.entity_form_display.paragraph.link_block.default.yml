@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_block.field_link_block_description
+    - field.field.paragraph.link_block.field_link_block_image
+    - field.field.paragraph.link_block.field_link_block_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.link_block
+  module:
+    - image
+    - link
+id: paragraph.link_block.default
+targetEntityType: paragraph
+bundle: link_block
+mode: default
+content:
+  field_link_block_description:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_link_block_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_link_block_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+hidden:
+  created: true
+  status: true
+  uid: true

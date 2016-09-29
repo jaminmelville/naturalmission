@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+    default_config_hash: pv7mkNed7Gp9_A280nqbc2mGqR2V_4zo7Xb8eZaZFYA
+name: extra_large
+label: 'Extra Large'
+effects:
+    93282c5c-d844-47c2-9e0b-4fc46325414b:
+        uuid: ''
+        id: image_scale_and_crop
+        weight: 1
+        data:
+            width: 640
+            height: 640

@@ -1,0 +1,15 @@
+{
+    "langcode": "en",
+    "db-type": "mysql",
+    "db-host": "naturalmission-mysql",
+    "db-name": "db",
+    "db-user": "user",
+    "db-pass": "password",
+    "db-prefix": "drupal",
+    "db-port": "3306",
+    "site-name": "'natural mission'",
+    "site-mail": "email@example.com",
+    "account-name": "admin",
+    "account-mail": "email@example.com",
+    "account-pass": "password"
+}
