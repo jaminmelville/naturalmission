@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.link_block.field_link_block_description
     - field.field.paragraph.link_block.field_link_block_image
     - field.field.paragraph.link_block.field_link_block_link
+    - field.field.paragraph.link_block.field_link_block_title
     - image.style.extra_large
     - paragraphs.paragraphs_type.link_block
   module:
@@ -41,6 +42,13 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+  field_link_block_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
 hidden:
   created: true
   uid: true

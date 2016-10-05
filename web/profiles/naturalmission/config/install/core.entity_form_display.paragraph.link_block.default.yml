@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.link_block.field_link_block_description
     - field.field.paragraph.link_block.field_link_block_image
     - field.field.paragraph.link_block.field_link_block_link
+    - field.field.paragraph.link_block.field_link_block_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.link_block
   module:
@@ -16,26 +17,33 @@ bundle: link_block
 mode: default
 content:
   field_link_block_description:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_link_block_image:
-    weight: 0
+    weight: 1
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_link_block_link:
-    weight: 1
+    weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+  field_link_block_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
 hidden:
   created: true
   status: true

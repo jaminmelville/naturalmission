@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "20327aacad05093b9c60daa2f06c1d79",
-    "content-hash": "22fedfa0e31aa0a413e7ac3928820b04",
+    "hash": "4d6f01b3557dafade3ebe04ce4f8e756",
+    "content-hash": "d24488e9970d688be042a20621e6de75",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1021,16 +1021,16 @@
         },
         {
             "name": "drupal/console",
-            "version": "1.0.0-rc1",
+            "version": "1.0.0-rc4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hechoendrupal/DrupalConsole.git",
-                "reference": "8092c8a0fba9d6cc255d201c96cae352f0b8a45c"
+                "reference": "1802c6d9d00c85f941de0e0d53289fc3d11c6cd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hechoendrupal/DrupalConsole/zipball/8092c8a0fba9d6cc255d201c96cae352f0b8a45c",
-                "reference": "8092c8a0fba9d6cc255d201c96cae352f0b8a45c",
+                "url": "https://api.github.com/repos/hechoendrupal/DrupalConsole/zipball/1802c6d9d00c85f941de0e0d53289fc3d11c6cd5",
+                "reference": "1802c6d9d00c85f941de0e0d53289fc3d11c6cd5",
                 "shasum": ""
             },
             "require": {
@@ -1038,8 +1038,8 @@
                 "composer/installers": "~1.0",
                 "dflydev/placeholder-resolver": "~1.0",
                 "doctrine/annotations": "1.2.*",
-                "drupal/console-core": "~1.0",
-                "gabordemooij/redbean": "@stable",
+                "drupal/console-core": "^1.0",
+                "gabordemooij/redbean": "~4.3",
                 "guzzlehttp/guzzle": "~6.1",
                 "padraic/phar-updater": "~1.0@dev",
                 "php": "^5.5.9 || ^7.0",
@@ -1097,7 +1097,7 @@
                 "drupal",
                 "symfony"
             ],
-            "time": "2016-09-27 12:45:03"
+            "time": "2016-10-04 10:19:23"
         },
         {
             "name": "drupal/console-core",
@@ -1446,7 +1446,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.0.zip",
-                "reference": null,
+                "reference": "7d70adcb69416f35eb2d2596340461df8efda009",
                 "shasum": null
             },
             "require": {
@@ -2427,16 +2427,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "9270140b940ff02e58ec577c237274e92cd40cdd"
+                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/9270140b940ff02e58ec577c237274e92cd40cdd",
-                "reference": "9270140b940ff02e58ec577c237274e92cd40cdd",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/8331b5efe816ae05461b7ca1e721c01b46bafb3e",
+                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e",
                 "shasum": ""
             },
             "require": {
@@ -2468,7 +2468,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-06-10 09:48:41"
+            "time": "2016-09-30 07:12:33"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -4446,16 +4446,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "f16a634ab08d87e520da5671ec52153d627f10f6"
+                "reference": "81c2b5fd36581370c7731387f05dcdb577050513"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/f16a634ab08d87e520da5671ec52153d627f10f6",
-                "reference": "f16a634ab08d87e520da5671ec52153d627f10f6",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/81c2b5fd36581370c7731387f05dcdb577050513",
+                "reference": "81c2b5fd36581370c7731387f05dcdb577050513",
                 "shasum": ""
             },
             "require": {
@@ -4468,7 +4468,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.25-dev"
+                    "dev-master": "1.26-dev"
                 }
             },
             "autoload": {
@@ -4503,7 +4503,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-09-21 23:05:12"
+            "time": "2016-10-02 16:19:13"
         },
         {
             "name": "webmozart/assert",

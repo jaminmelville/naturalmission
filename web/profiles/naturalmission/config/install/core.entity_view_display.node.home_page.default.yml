@@ -1,88 +1,103 @@
 langcode: en
 status: true
 dependencies:
-    config:
-        - field.field.node.home_page.field_home_page_about_links
-        - field.field.node.home_page.field_home_page_about_text
-        - field.field.node.home_page.field_home_page_address
-        - field.field.node.home_page.field_home_page_email
-        - field.field.node.home_page.field_home_page_phone
-        - field.field.node.home_page.field_home_page_profile_picture
-        - field.field.node.home_page.field_home_page_resource_links
-        - field.field.node.home_page.field_home_page_skype
-        - image.style.extra_large
-        - node.type.home_page
-    module:
-        - entity_reference_revisions
-        - image
-        - text
-        - user
-_core:
-    default_config_hash: nVF_j6A_3enWRGhNulGI7LEo7y4dYDZ_kNmU1tdrtO0
+  config:
+    - field.field.node.home_page.field_home_page_about_links
+    - field.field.node.home_page.field_home_page_about_text
+    - field.field.node.home_page.field_home_page_address
+    - field.field.node.home_page.field_home_page_email
+    - field.field.node.home_page.field_home_page_phone
+    - field.field.node.home_page.field_home_page_profile_picture
+    - field.field.node.home_page.field_home_page_resource_links
+    - field.field.node.home_page.field_home_page_services
+    - field.field.node.home_page.field_home_page_skype
+    - field.field.node.home_page.field_home_page_video
+    - image.style.extra_large
+    - node.type.home_page
+  module:
+    - entity_reference_revisions
+    - file
+    - image
+    - text
+    - user
 id: node.home_page.default
 targetEntityType: node
 bundle: home_page
 mode: default
 content:
-    field_home_page_about_links:
-        type: entity_reference_revisions_entity_view
-        weight: 103
-        label: hidden
-        settings:
-            view_mode: default
-            link: ''
-        third_party_settings: {  }
-    field_home_page_about_text:
-        weight: 101
-        label: hidden
-        settings: {  }
-        third_party_settings: {  }
-        type: text_default
-    field_home_page_address:
-        weight: 108
-        label: hidden
-        settings: {  }
-        third_party_settings: {  }
-        type: basic_string
-    field_home_page_email:
-        weight: 106
-        label: hidden
-        settings:
-            link_to_entity: false
-        third_party_settings: {  }
-        type: string
-    field_home_page_phone:
-        weight: 107
-        label: hidden
-        settings:
-            link_to_entity: false
-        third_party_settings: {  }
-        type: string
-    field_home_page_profile_picture:
-        weight: 102
-        label: hidden
-        settings:
-            image_style: extra_large
-            image_link: ''
-        third_party_settings: {  }
-        type: image
-    field_home_page_resource_links:
-        type: entity_reference_revisions_entity_view
-        weight: 104
-        label: hidden
-        settings:
-            view_mode: default
-            link: ''
-        third_party_settings: {  }
-    field_home_page_skype:
-        weight: 105
-        label: hidden
-        settings:
-            link_to_entity: false
-        third_party_settings: {  }
-        type: string
-    links:
-        weight: 100
-        settings: {  }
-        third_party_settings: {  }
+  field_home_page_about_links:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_home_page_about_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_home_page_address:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_home_page_email:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_home_page_phone:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_home_page_profile_picture:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: extra_large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_home_page_resource_links:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_home_page_services:
+    type: entity_reference_revisions_entity_view
+    weight: 10
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_home_page_skype:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_home_page_video:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

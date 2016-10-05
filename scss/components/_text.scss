@@ -1,0 +1,16 @@
+.text {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    margin: 3em 0;
+    text-align: justify;
+    @media screen and (min-width: $break-medium) {
+        font-size: 1.1rem;
+    }
+
+    &--columns {
+        @media screen and (min-width: $break-medium) {
+            column-count: 2;
+            column-gap: 2em;
+        }
+    }
+}

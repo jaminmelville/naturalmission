@@ -1,0 +1,46 @@
+.menu {
+    background-color: $color2;
+    color: $color1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @media screen and (min-width: $break-large) {
+        top: auto;
+        bottom: 0;
+    }
+
+    &__button {
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 0.3em;
+        @media screen and (min-width: $break-large) {
+            display: none;
+        }
+    }
+
+    &__items {
+        display: none;
+
+        &--open {
+            display: block;
+        }
+
+        @media screen and (min-width: $break-large) {
+            display: block;
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        margin: 2em;
+        text-align: center;
+        font-size: 1.3rem;
+
+        @media screen and (min-width: $break-large) {
+            display: inline-block;
+            margin: 0.7em 2em;
+        }
+    }
+}

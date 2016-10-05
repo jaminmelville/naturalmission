@@ -1,0 +1,27 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 3em;
+
+    &__profile {
+        padding: 0 25%;
+        text-align: center;
+        flex: 0 0 100%;
+
+        @media screen and (min-width: $break-medium) {
+            padding: 0;
+            padding-right: 1em;
+            flex: 0 0 33.33%;
+        }
+    }
+
+    &__text {
+        flex: 0 0 100%;
+
+        @media screen and (min-width: $break-medium) {
+            flex: 0 0 66.66%;
+            padding-left: 1em;
+        }
+    }
+}

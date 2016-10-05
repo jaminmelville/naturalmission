@@ -1,0 +1,26 @@
+.contact {
+
+    &__map {
+        @include fill;
+    }
+
+    &__option {
+        cursor: pointer;
+
+        &--selected {
+            color: $color4;
+        }
+    }
+
+    &__value {
+        display: none;
+        padding: 2em 1em;
+        font-size: 1.1rem;
+        background-color: transparentize($color1, 0.5);
+        margin: 1em 0;
+
+        &--selected {
+            display: block;
+        }
+    }
+}

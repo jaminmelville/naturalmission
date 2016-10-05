@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.service.field_service_icon
+    - field.field.paragraph.service.field_service_text
+    - field.field.paragraph.service.field_service_title
+    - image.style.large
+    - paragraphs.paragraphs_type.service
+  module:
+    - image
+    - text
+id: paragraph.service.default
+targetEntityType: paragraph
+bundle: service
+mode: default
+content:
+  field_service_icon:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_service_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_service_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true

@@ -1,11 +1,12 @@
 langcode: en
 status: true
 dependencies:
-    config:
-        - field.storage.node.field_home_page_resource_links
-        - node.type.home_page
-    module:
-        - entity_reference_revisions
+  config:
+    - field.storage.node.field_home_page_resource_links
+    - node.type.home_page
+    - paragraphs.paragraphs_type.link_block
+  module:
+    - entity_reference_revisions
 id: node.home_page.field_home_page_resource_links
 field_name: field_home_page_resource_links
 entity_type: node
@@ -17,11 +18,15 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-    handler: 'default:paragraph'
-    handler_settings:
-        target_bundles: null
-        target_bundles_drag_drop:
-            link_block:
-                weight: 2
-                enabled: false
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      link_block: link_block
+    target_bundles_drag_drop:
+      link_block:
+        enabled: true
+        weight: 2
+      service:
+        weight: 4
+        enabled: false
 field_type: entity_reference_revisions

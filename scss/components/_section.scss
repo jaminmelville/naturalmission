@@ -1,0 +1,21 @@
+.section {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+
+    &--short {
+        min-height: 0;
+    }
+
+    &__content {
+        margin: 4em 2em;
+        position: relative;
+        width: 100%;
+
+        @media screen and (min-width: $break-large) {
+            width: 1000px;
+            margin: 4em auto;
+        }
+    }
+}

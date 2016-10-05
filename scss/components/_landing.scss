@@ -1,0 +1,48 @@
+.landing {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+
+    &__text {
+        background-color: transparentize($color2, 0.5);
+        color: $color1;
+        padding: 2em 0.5em;
+        position: relative;
+        text-align: right;
+        width: 100%;
+        font-size: 1rem;
+
+        @media screen and (min-width: $break-medium) {
+            font-size: 1.5rem;
+            padding: 2em;
+        }
+    }
+
+    &__title {
+        font-family: 'Conv_cafeandbrewery';
+        font-size: 2.7em;
+    }
+
+    &__subtitle {
+        font-size: 0.9em;
+        letter-spacing: 0.39em;
+        margin-top: -0.8em;
+        margin-right: -0.4em;
+   }
+
+    &__video-wrapper {
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &__video {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
