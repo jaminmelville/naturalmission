@@ -55,6 +55,11 @@
     &__link {
         display: none;
         color: $color1;
+        transition: color 0.5s;
+
+        &:hover {
+            color: $color3;
+        }
     }
 
     &--active {

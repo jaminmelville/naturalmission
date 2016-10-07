@@ -2308,9 +2308,10 @@ img {
   flex: 0 0 25%;
   font-size: 2.5rem;
   padding: 0.2em 0;
-  text-align: center; }
-  .contact__option--selected {
-    color: #21c3ff; }
+  text-align: center;
+  transition: color 0.5s; }
+  .contact__option--selected, .contact__option:hover {
+    color: #ff008d; }
   @media screen and (min-width: 768px) {
     .contact__option {
       flex: 0 0 100%; } }
@@ -2323,6 +2324,10 @@ img {
   margin: 1em 0; }
   .contact__value--selected {
     display: block; }
+  .contact__value a {
+    transition: color 0.5s; }
+    .contact__value a:hover {
+      color: #ff008d; }
 
 .landing {
   align-items: center;
@@ -2411,7 +2416,10 @@ img {
     display: none; }
   .link-blocks__link {
     display: none;
-    color: #ffffff; }
+    color: #ffffff;
+    transition: color 0.5s; }
+    .link-blocks__link:hover {
+      color: #ff008d; }
   .link-blocks--active .link-blocks__content {
     background-color: rgba(0, 0, 0, 0.67); }
   .link-blocks--active .link-blocks__description,
@@ -2448,7 +2456,10 @@ img {
   .menu__item {
     cursor: pointer;
     font-size: 1.1rem;
-    margin: 2em; }
+    margin: 2em;
+    transition: color 0.5s; }
+    .menu__item:hover {
+      color: #ff008d; }
     @media screen and (min-width: 992px) {
       .menu__item {
         display: inline-block;

@@ -174,7 +174,6 @@ GoogleMapsLoader.load((google) => {
     }
     var map = new google.maps.Map($('.js-map')[0], mapProperties)
 
-
     $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + window.address, (data) => {
         let position = new google.maps.LatLng(
             data.results[0].geometry.location.lat,
@@ -186,7 +185,7 @@ GoogleMapsLoader.load((google) => {
         new google.maps.Marker({
             position: position,
             map: map,
-            icon: 'http://maps.google.com/mapfiles/ms/icons/pink-dot.png' //@TODO: Replace with correctly colored image.
+            icon: '/themes/custom/naturalmission/images/pin.png'
         });
     });
 

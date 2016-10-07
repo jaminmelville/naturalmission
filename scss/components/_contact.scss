@@ -35,9 +35,10 @@
         font-size: 2.5rem;
         padding: 0.2em 0;
         text-align: center;
+        transition: color 0.5s;
 
-        &--selected {
-            color: $color4;
+        &--selected, &:hover {
+            color: $color3;
         }
         @media screen and (min-width: $break-medium) {
             flex: 0 0 100%;
@@ -53,6 +54,14 @@
 
         &--selected {
             display: block;
+        }
+
+        // @TODO: classname it.
+        a {
+            transition: color 0.5s;
+            &:hover {
+                color: $color3;
+            }
         }
     }
 }

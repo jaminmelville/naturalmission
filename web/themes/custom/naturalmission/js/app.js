@@ -10557,7 +10557,7 @@
 	        new google.maps.Marker({
 	            position: position,
 	            map: map,
-	            icon: 'http://maps.google.com/mapfiles/ms/icons/pink-dot.png' //@TODO: Replace with correctly colored image.
+	            icon: '/themes/custom/naturalmission/images/pin.png'
 	        });
 	    });
 	});
