@@ -40,7 +40,7 @@ gulp.task('install:docker', (callback) => {
             // Wait for services in container to be up.
             runCommand('sleep', ['10'], cb)
         }
-    ], callback);
+    ], callback)
 })
 
 gulp.task('install:composer', (callback) => {
@@ -48,18 +48,22 @@ gulp.task('install:composer', (callback) => {
 })
 
 gulp.task('install:drupal', (callback) => {
-    // @TODO: drop database prefix once drupal console supports it.
-    var installCommand = 'drupal init --override --no-interaction; drupal site:install'
     var options = require('./drupal.config.json')
+
+    /*
+    @TODO: Once drupal console supports not having db prefix use it and then wont need drush.
+    var installCommand = 'drupal init --override --no-interaction; drupal site:install'
     for (option in options) {
         installCommand += ' --' + option + ' ' + options[option]
     }
-
     installCommand += ' naturalmission'
-
-    /* Alternatively using drush:
-    installCommand = 'drush -r $(pwd)/web -y site-install naturalmission --db-url=mysql://USER:PASSWORD@HOST/DATABASE --account-pass=PASSWORD --site-name="natural mission"'
     */
+
+    // Using drush to install site.
+    installCommand = 'drush -y site-install naturalmission --db-url=mysql://'
+    + options['db-user'] + ':' + options['db-pass'] + '@' + options['db-host'] + '/' + options['db-name']
+    + ' --account-pass=' + options['account-pass']
+    + ' --site-name=' + options['site-name']
 
     var command = 'cd web; drupal database:drop -n; \
         cd sites/default; rm -rf files; cp default.services.yml services.yml; cp default.settings.php settings.php; \
@@ -89,6 +93,30 @@ gulp.task('cache:rebuild', (callback) => {
 
 gulp.task('config:diff', (callback) => {
     runDrupalCommand('config:diff -n config', callback)
+})
+
+gulp.task('save', (callback) => {
+    async.series([
+        (cb) => {
+            runDrupalCommand('database:dump --file ../save/dump.sql', cb)
+        },
+        (cb) => {
+            runCommandInContainer('rm -r save/files/; cp -r web/sites/default/files/ save/', cb)
+        }
+    ], callback)
+})
+
+gulp.task('load', (callback) => {
+    async.series([
+        (cb) => {
+            runDrupalCommand('database:restore --file=../save/dump.sql', cb)
+        },
+        (cb) => {
+            runCommandInContainer('rm -r web/sites/default/files/; \
+            cp -r save/files/ web/sites/default/; \
+            chown -R www-data:1000 web/sites/default', cb)
+        }
+    ], callback)
 })
 
 var browserSync = require('browser-sync').create()
