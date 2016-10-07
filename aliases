@@ -1,2 +1,2 @@
-drupal () { docker exec -it naturalmission-php-fpm bash -c "drupal $@"; }
+drupal () { docker exec -it naturalmission-php-fpm bash -c "cd web; drupal $@"; }
 composer () { docker exec -it naturalmission-php-fpm bash -c "composer $@"; }
