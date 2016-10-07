@@ -22,6 +22,8 @@
 
     &__items {
         display: none;
+        text-align: center;
+        text-transform: uppercase;
 
         &--open {
             display: block;
@@ -34,9 +36,8 @@
 
     &__item {
         cursor: pointer;
+        font-size: 1.1rem;
         margin: 2em;
-        text-align: center;
-        font-size: 1.3rem;
 
         @media screen and (min-width: $break-large) {
             display: inline-block;

@@ -52,7 +52,7 @@ a {
   color: inherit; }
 
 body {
-  background-image: url("/themes/custom/naturalmission/media/45-degree-fabric-dark.png");
+  background-image: url("/themes/custom/naturalmission/images/black-thread-light.png");
   font-family: monospace;
   overflow-x: hidden;
   width: 100%; }
@@ -2264,14 +2264,14 @@ img {
     @media screen and (min-width: 768px) {
       .about__profile {
         padding: 0;
-        padding-right: 1em;
+        padding-right: 2em;
         flex: 0 0 33.33%; } }
   .about__text {
     flex: 0 0 100%; }
     @media screen and (min-width: 768px) {
       .about__text {
         flex: 0 0 66.66%;
-        padding-left: 1em; } }
+        padding-left: 2em; } }
 
 .contact__map {
   position: absolute;
@@ -2280,10 +2280,40 @@ img {
   height: 100%;
   width: 100%; }
 
+.contact__content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap; }
+  @media screen and (min-width: 768px) {
+    .contact__content {
+      flex-wrap: nowrap; } }
+
+.contact__options {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap; }
+  @media screen and (min-width: 768px) {
+    .contact__options {
+      flex: 0 1 1em;
+      padding: 0 2em; } }
+
+.contact__values {
+  flex: 1 1 100%; }
+  @media screen and (min-width: 768px) {
+    .contact__values {
+      padding: 0 2em; } }
+
 .contact__option {
-  cursor: pointer; }
+  cursor: pointer;
+  flex: 0 0 25%;
+  font-size: 2.5rem;
+  padding: 0.2em 0;
+  text-align: center; }
   .contact__option--selected {
     color: #21c3ff; }
+  @media screen and (min-width: 768px) {
+    .contact__option {
+      flex: 0 0 100%; } }
 
 .contact__value {
   display: none;
@@ -2314,6 +2344,9 @@ img {
   .landing__title {
     font-family: 'Conv_cafeandbrewery';
     font-size: 2.7em; }
+    @media screen and (min-width: 768px) {
+      .landing__title {
+        font-size: 2.79em; } }
   .landing__subtitle {
     font-size: 0.9em;
     letter-spacing: 0.39em;
@@ -2336,7 +2369,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png"); }
+  background-image: url("/themes/custom/naturalmission/images/black-thread-light.png"); }
   .link-blocks__item {
     padding-top: 100%;
     position: relative;
@@ -2404,7 +2437,9 @@ img {
       .menu__button {
         display: none; } }
   .menu__items {
-    display: none; }
+    display: none;
+    text-align: center;
+    text-transform: uppercase; }
     .menu__items--open {
       display: block; }
     @media screen and (min-width: 992px) {
@@ -2412,9 +2447,8 @@ img {
         display: block; } }
   .menu__item {
     cursor: pointer;
-    margin: 2em;
-    text-align: center;
-    font-size: 1.3rem; }
+    font-size: 1.1rem;
+    margin: 2em; }
     @media screen and (min-width: 992px) {
       .menu__item {
         display: inline-block;
@@ -2465,11 +2499,13 @@ img {
   text-align: justify; }
   @media screen and (min-width: 768px) {
     .text {
-      font-size: 1.1rem; } }
+      font-size: 1rem; } }
   @media screen and (min-width: 768px) {
     .text--columns {
       column-count: 2;
-      column-gap: 2em; } }
+      column-gap: 1em; } }
+  .text ul {
+    list-style: circle; }
 
 .title {
   font-family: 'Conv_cafeandbrewery';
@@ -2478,4 +2514,4 @@ img {
   border-bottom: 1px solid #444444; }
   @media screen and (min-width: 768px) {
     .title {
-      font-size: 4rem; } }
+      font-size: 3.5rem; } }

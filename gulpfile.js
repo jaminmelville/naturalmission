@@ -65,8 +65,8 @@ gulp.task('install:drupal', (callback) => {
         cd sites/default; rm -rf files; cp default.services.yml services.yml; cp default.settings.php settings.php; \
         cd ../..; \
         ' + installCommand + '; \
-        chown -R www-data:1000 sites/default; chmod 775 sites/default; \
         drupal cache:rebuild all; \
+        chown -R www-data:1000 sites/default; chmod 775 sites/default; \
         rm -rf config; drupal config:export --directory config'
     runCommandInContainer(command, callback)
 })

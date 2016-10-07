@@ -22,6 +22,10 @@
     &__title {
         font-family: 'Conv_cafeandbrewery';
         font-size: 2.7em;
+
+        @media screen and (min-width: $break-medium) {
+            font-size: 2.79em;
+        }
     }
 
     &__subtitle {

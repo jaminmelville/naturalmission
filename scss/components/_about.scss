@@ -11,7 +11,7 @@
 
         @media screen and (min-width: $break-medium) {
             padding: 0;
-            padding-right: 1em;
+            padding-right: 2em;
             flex: 0 0 33.33%;
         }
     }
@@ -21,7 +21,7 @@
 
         @media screen and (min-width: $break-medium) {
             flex: 0 0 66.66%;
-            padding-left: 1em;
+            padding-left: 2em;
         }
     }
 }

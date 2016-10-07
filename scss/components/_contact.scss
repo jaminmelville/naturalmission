@@ -1,14 +1,46 @@
 .contact {
-
     &__map {
         @include fill;
     }
 
+    &__content {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (min-width: $break-medium) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__options {
+        display: flex;
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+        @media screen and (min-width: $break-medium) {
+            flex: 0 1 1em;
+            padding: 0 2em;
+        }
+    }
+
+    &__values {
+        flex: 1 1 100%;
+        @media screen and (min-width: $break-medium) {
+            padding: 0 2em;
+        }
+    }
+
     &__option {
         cursor: pointer;
+        flex: 0 0 25%;
+        font-size: 2.5rem;
+        padding: 0.2em 0;
+        text-align: center;
 
         &--selected {
             color: $color4;
+        }
+        @media screen and (min-width: $break-medium) {
+            flex: 0 0 100%;
         }
     }
 
