@@ -1,10 +1,11 @@
 var path = require('path')
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
     entry: './js/app.js',
     output: {
-        path: './web/themes/custom/naturalmission/media/js',
-        filename: 'app.js'
+        path: './web/themes/custom/naturalmission/',
+        filename: 'js/app.js'
     },
     module: {
         loaders: [{
@@ -16,7 +17,7 @@ module.exports = {
             }
         }, {
             test: /\.scss$/,
-            loaders: ['style', 'css', 'sass']
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
         }, {
             test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
             loader: "url?limit=10000&mimetype=application/font-woff"
@@ -36,5 +37,8 @@ module.exports = {
     },
     sassLoader: {
         includePaths: [path.resolve(__dirname, "node_modules")]
-    }
-};
+    },
+    plugins: [
+        new ExtractTextPlugin("css/style.css")
+    ]
+}

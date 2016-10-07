@@ -1,0 +1,9 @@
+# @TODO: Use libraries.
+global:
+  version: VERSION
+  css:
+    style:
+      css/fonts.css: {}
+      css/style.css: {}
+  js:
+    js/app.js: {}

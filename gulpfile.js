@@ -2,29 +2,37 @@ var gulp = require('gulp')
 var spawn = require('child_process').spawn
 var runSequence = require('run-sequence')
 
-// @TODO: start needs to wait for mysql to be up and running.
-gulp.task('install', ['start'], (callback) => {
-    runSequence('install:docker', 'install:drupal', callback)
+gulp.task('install', (callback) => {
+    runSequence('install:docker', 'install:composer', 'install:drupal', callback)
 })
 
 gulp.task('install:docker', (callback) => {
-    runCommand("docker-compose",[ 'up', '-d'], callback)
+    runCommand("docker-compose", [ 'up', '-d'], callback)
+    // @TODO: return only after services in continers are up. Sleep for a while?
+})
+
+gulp.task('install:composer', (callback) => {
+    runCommandInContainer('composer install', callback)
 })
 
 gulp.task('install:drupal', (callback) => {
+    var installCommand = 'drupal init --override --no-interaction; drupal site:install'
     var options = require('./drupal.config.json')
-    var installCommand = 'drupal site:install'
     for (option in options) {
         installCommand += ' --' + option + ' ' + options[option]
     }
+
     installCommand += ' naturalmission'
-    // @TODO: composer install.
-    // @TODO: drupal init in dockerfile instead maybe.
-    var command = 'cd web; drupal init; drupal database:drop -n; \
-        cd sites/default; rm -rf files; cp default.settings.php settings.php; \
+
+    /* Alternatively using drush:
+    installCommand = 'drush -r $(pwd)/web -y site-install naturalmission --db-url=mysql://USER:PASSWORD@HOST/DATABASE --account-pass=PASSWORD --site-name="natural mission"'
+    */
+
+    var command = 'drupal database:drop -n; \
+        cd web/sites/default; rm -rf files; cp default.services.yml services.yml; cp default.settings.php settings.php; \
         cd ../..; \
         ' + installCommand + '; \
-        chown -R www-data:1000 sites/default; chmod 664 sites/default/settings.php; \
+        chown -R www-data:1000 sites/default; chmod 775 sites/default; \
         drupal cache:rebuild all; \
         rm -rf config; drupal config:export --directory config'
     runCommandInContainer(command, callback)
@@ -57,7 +65,7 @@ function runDrupalCommand(command, callback) {
     runCommandInContainer('cd web; drupal ' + command, callback)
 }
 
-gulp.task('watch', (callback) => {
+gulp.task('watch', ['browser-sync'], (callback) => {
     runCommand('webpack', ['--progress', '--colors', '--watch'], callback)
 })
 
@@ -73,6 +81,10 @@ gulp.task('config:diff', (callback) => {
     runDrupalCommand('config:diff -n config', callback)
 })
 
-gulp.task('drupal', (callback) => {
-    runDrupalCommand(process.argv[4], callback)
+var browserSync = require('browser-sync').create()
+gulp.task('browser-sync', () => {
+    browserSync.init({
+        proxy: "naturalmission.dev"
+    })
+    gulp.watch("web/themes/**/*").on('change', browserSync.reload);
 })

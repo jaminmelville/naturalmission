@@ -1,7 +1,7 @@
 <section class='landing'>
   <div class='landing__video-wrapper'>
     <video class='landing__video' autoplay loop muted>
-      <source src="{{ content.field_home_page_video }}" type="video/mp4">
+      <source src="{{ file_url(content.field_home_page_video['#items'][0].entity.uri[0].value) }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
