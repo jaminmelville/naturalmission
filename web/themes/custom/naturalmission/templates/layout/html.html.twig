@@ -3,12 +3,15 @@
   <head>
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="stylesheet" href="/themes/custom/naturalmission/css/fonts.css">
     <link rel="stylesheet" href="/themes/custom/naturalmission/css/style.css">
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
   </head>
   <body>
     {{ page }}
     <script type='text/javascript' src='/themes/custom/naturalmission/js/app.js'></script>
+    <js-bottom-placeholder token="{{ placeholder_token }}">
   </body>
 </html>

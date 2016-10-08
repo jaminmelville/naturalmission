@@ -1,6 +1,8 @@
 <section class='landing'>
   <div class='landing__video-wrapper'>
-    <video class='landing__video' poster="placeholder.png" autoplay loop muted>
+
+    <!-- @TODO: Use the full screen image style for video preview. -->
+    <video class='landing__video' poster="{{ file_url(content.field_home_page_video_preview['#items'][0].entity.uri[0].value) }}" autoplay loop muted>
       <source src="{{ file_url(content.field_home_page_video['#items'][0].entity.uri[0].value) }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -34,7 +36,7 @@
   </div>
 </section>
 
-<section class='section section--short' data-scroll='about'>
+<section class='section' data-scroll='about'>
   <div class='section__content'>
     <h3 class='title text-center'>about me</h3>
     <div class='about'>
@@ -52,20 +54,20 @@
 
 {{ content.field_home_page_about_links }}
 
-<section class='section' data-scroll='services'>
+<section class='section section--full-height' data-scroll='services'>
   <div class='section__content'>
     <h3 class='title'>Services</h3> {{ content.field_home_page_services }}
   </div>
 </section>
 
-<section class='section section--short' data-scroll='resources'>
+<section class='section' data-scroll='resources'>
   <div class='section__content'>
     <h3 class='title'>Resources</h3>
   </div>
 </section>
 {{ content.field_home_page_resource_links }}
 
-<section class='section' data-scroll='contact'>
+<section class='section section--full-height section--no-mouse' data-scroll='contact'>
   <script type='text/javascript'>
     window.address = '{{ content.field_home_page_address['#items'][0].value|replace({"\n":'', "\r":''}) }}';
   </script>

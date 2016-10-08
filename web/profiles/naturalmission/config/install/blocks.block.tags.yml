@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - naturalmission
+id: tabs
+theme: naturalmission
+region: header
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      home_page: home_page
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

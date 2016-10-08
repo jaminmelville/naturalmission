@@ -1,11 +1,14 @@
 .section {
     align-items: center;
     display: flex;
-    min-height: 100vh;
     position: relative;
 
-    &--short {
-        min-height: 0;
+    &--full-height {
+        min-height: 100vh;
+    }
+    
+    &--no-mouse {
+        pointer-events: none;
     }
 
     &__content {
@@ -13,9 +16,15 @@
         position: relative;
         width: 100%;
 
+        &--small-puff {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
         @media screen and (min-width: $break-large) {
             width: 1000px;
-            margin: 4em auto;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

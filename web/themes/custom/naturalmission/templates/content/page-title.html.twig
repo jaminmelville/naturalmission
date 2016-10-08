@@ -14,6 +14,10 @@
 #}
 {{ title_prefix }}
 {% if title %}
-  <h1{{ title_attributes.addClass('page__title') }}>{{ title }}</h1>
+<section class='section'>
+    <div class='section__content section__content--small-puff'>
+        <h1{{ title_attributes.addClass('title') }}>{{ title }}</h1>
+    </div>
+</section>
 {% endif %}
 {{ title_suffix }}

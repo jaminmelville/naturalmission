@@ -5,17 +5,20 @@ dependencies:
     - system
   theme:
     - naturalmission
-id: naturalmission_page_title
+id: sitebranding
 theme: naturalmission
-region: content
-weight: -2
+region: header
+weight: 0
 provider: null
-plugin: page_title_block
+plugin: system_branding_block
 settings:
-  id: page_title_block
-  label: 'Page title'
-  provider: core
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
   label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: true
 visibility:
   request_path:
     id: request_path

@@ -1,0 +1,41 @@
+.form {
+
+    &__element {
+        margin: 1.5em 0;
+    }
+
+    &__element-inner {
+        display: flex;
+        border: 1px solid black;
+        background-color: transparentize($color1, 0.5);
+        font-size: 1.5rem;
+        line-height: 2em;
+        padding: 0 1em;
+    }
+
+    &__label {
+        padding-right: 1em;
+        border-right:1px solid black;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        line-height: 2em;
+        padding-left: 1em;
+        font-family: inherit;
+
+        &--bordered {
+            border: 1px solid black;
+            background-color: transparentize($color1, 0.5);
+            margin-top: 1em;
+            padding-right: 1em;
+        }
+    }
+
+    &__description {
+        margin-top: 0.5em;
+    }
+}

@@ -1,6 +1,7 @@
 .contact {
     &__map {
         @include fill;
+        pointer-events: all;
     }
 
     &__content {
@@ -34,6 +35,7 @@
         flex: 0 0 25%;
         font-size: 2.5rem;
         padding: 0.2em 0;
+        pointer-events: all;
         text-align: center;
         transition: color 0.5s;
 
@@ -51,6 +53,7 @@
         font-size: 1.1rem;
         background-color: transparentize($color1, 0.5);
         margin: 1em 0;
+        pointer-events: all;
 
         &--selected {
             display: block;

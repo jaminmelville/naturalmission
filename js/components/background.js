@@ -1,7 +1,9 @@
 import $ from 'jquery'
 
+let randomness = Math.random() * 360
+
 function setBackgroundColor() {
-    var hue = $(window).scrollTop() / $(window).height() * 60
+    var hue = (randomness + $(window).scrollTop() / $(window).height() * 60) % 360
     $('body').css({'background-color': 'hsl(' + hue + ', 100%, 90%)'})
 }
 

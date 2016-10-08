@@ -12,7 +12,8 @@ dependencies:
     - field.field.node.home_page.field_home_page_services
     - field.field.node.home_page.field_home_page_skype
     - field.field.node.home_page.field_home_page_video
-    - image.style.extra_large
+    - field.field.node.home_page.field_home_page_video_preview
+    - image.style.full_screen
     - node.type.home_page
   module:
     - entity_reference_revisions
@@ -27,40 +28,40 @@ mode: default
 content:
   field_home_page_about_links:
     type: entity_reference_revisions_entity_view
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
   field_home_page_about_text:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
   field_home_page_address:
-    weight: 9
+    weight: 10
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
   field_home_page_email:
-    weight: 7
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_home_page_phone:
     weight: 8
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_home_page_phone:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_home_page_profile_picture:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       image_style: extra_large
@@ -69,7 +70,7 @@ content:
     type: image
   field_home_page_resource_links:
     type: entity_reference_revisions_entity_view
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       view_mode: default
@@ -77,14 +78,14 @@ content:
     third_party_settings: {  }
   field_home_page_services:
     type: entity_reference_revisions_entity_view
-    weight: 10
+    weight: 11
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
   field_home_page_skype:
-    weight: 6
+    weight: 7
     label: hidden
     settings:
       link_to_entity: false
@@ -96,6 +97,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: file_url_plain
+  field_home_page_video_preview:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: full_screen
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   links:
     weight: 0
     settings: {  }

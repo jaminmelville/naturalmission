@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+name: full_screen
+label: 'Full Screen (1920x1080)'
+effects:
+  a856954d-f689-4b49-bcd1-df150e313e7d:
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1080

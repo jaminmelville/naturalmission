@@ -21,14 +21,24 @@ img {
     max-width: 100%;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+
 $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.6.3/fonts";
 @import 'font-awesome/scss/font-awesome';
 @import 'variables';
 @import 'mixins';
 @import 'components/about';
 @import 'components/contact';
+@import 'components/form';
 @import 'components/landing';
 @import 'components/link-blocks';
+@import 'components/local-tasks';
 @import 'components/menu';
 @import 'components/section';
 @import 'components/service';
