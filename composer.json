@@ -23,7 +23,8 @@
         "drush/drush": "~8.0",
         "drupal/console": "~1.0",
         "drupal/paragraphs": "^8.1",
-        "symfony/dom-crawler": "2.8.11"
+        "symfony/dom-crawler": "2.8.11",
+        "drupal/pathauto": "8.*"
     },
     "require-dev": {
         "behat/mink": "~1.7",

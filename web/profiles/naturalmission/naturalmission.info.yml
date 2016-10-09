@@ -38,6 +38,7 @@ dependencies:
   - tour
   - automated_cron
   - paragraphs
+  - pathauto
 themes:
   - naturalmission
   - seven
