@@ -1,13 +1,20 @@
-{{ page.header }}
-{{ page.content }}
+<div class='region__top'>
+    {{ page.top }}
+</div>
+<div class='region__header'>
+    {{ page.header }}
+</div>
 
-{% if page.sidebar_first %}
-  {{ page.sidebar_first }}
-{% endif %}
-
-{% if page.sidebar_second %}
-  {{ page.sidebar_second }}
-{% endif %}
+<div class='region__row'>
+    <div class='region__content'>
+        {{ page.content }}
+    </div>
+    {% if page.sidebar %}
+        <div class='region__sidebar'>
+          {{ page.sidebar }}
+        </div>
+    {% endif %}
+</div>
 
 {% if page.footer %}
   {{ page.footer }}

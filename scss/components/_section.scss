@@ -6,7 +6,7 @@
     &--full-height {
         min-height: 100vh;
     }
-    
+
     &--no-mouse {
         pointer-events: none;
     }
@@ -16,9 +16,9 @@
         position: relative;
         width: 100%;
 
-        &--small-puff {
-            margin-top: 1em;
-            margin-bottom: 1em;
+        &--no-margin {
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         @media screen and (min-width: $break-large) {

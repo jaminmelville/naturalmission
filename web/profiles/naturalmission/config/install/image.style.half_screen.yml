@@ -1,12 +1,12 @@
 langcode: en
 status: true
 dependencies: {  }
-name: full_screen
-label: 'Full Screen (1920x1080)'
+name: half_screen
+label: 'Half screen (960x540)'
 effects:
   -
     id: image_scale_and_crop
     weight: 1
     data:
-      width: 1920
-      height: 1080
+      width: 960
+      height: 540

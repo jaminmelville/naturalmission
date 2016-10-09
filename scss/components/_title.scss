@@ -4,6 +4,10 @@
     margin: 0.5em 0;
     border-bottom: 1px solid $color5;
 
+    &--center {
+        text-align: center;
+    }
+    
     @media screen and (min-width: $break-medium) {
         font-size: 3.5rem;
     }

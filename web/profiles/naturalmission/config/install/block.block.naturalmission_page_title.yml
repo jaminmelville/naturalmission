@@ -7,8 +7,8 @@ dependencies:
     - naturalmission
 id: naturalmission_page_title
 theme: naturalmission
-region: content
-weight: -2
+region: header
+weight: 0
 provider: null
 plugin: page_title_block
 settings:

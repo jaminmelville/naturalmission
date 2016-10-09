@@ -1,0 +1,24 @@
+.recent {
+  background-color: $color1;
+  padding: 1rem;
+
+  &__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  &__items {
+    list-style: circle;
+    margin-left: 1em;
+  }
+  &__item {
+      font-size: 1rem;
+      margin: 0.5em 0;
+      transition: color 0.5s;
+      &:hover {
+        color: $color3;
+      }
+  }
+
+}

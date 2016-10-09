@@ -1,0 +1,18 @@
+<article class='article'>
+  <div class='article__image'>
+    {{ content.field_image }}
+  </div>
+  <div class='article__content'>
+    <div class='article__author'>
+      Article by
+      {{ author_name }}
+    </div>
+    <div class='article__date'>
+      {% set createdDate = node.getCreatedTime | date('j F Y') %}
+      {{ createdDate }}
+    </div>
+    <div class='text article__text'>
+      {{ content.body }}
+    </div>
+  </div>
+</article>

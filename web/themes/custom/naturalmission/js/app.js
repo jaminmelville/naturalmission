@@ -78,7 +78,7 @@
 
 	function setBackgroundColor() {
 	    var hue = (randomness + (0, _jquery2.default)(window).scrollTop() / (0, _jquery2.default)(window).height() * 60) % 360;
-	    (0, _jquery2.default)('body').css({ 'background-color': 'hsl(' + hue + ', 100%, 90%)' });
+	    (0, _jquery2.default)('.js-background').css({ 'background-color': 'hsl(' + hue + ', 100%, 90%)' });
 	}
 
 	(0, _jquery2.default)(window).on('scroll', function () {

@@ -1,0 +1,24 @@
+.region {
+
+    &__row {
+        display: flex;
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__header {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        margin: 1rem;
+    }
+
+    &__sidebar {
+        flex: 0 0 320px;
+        margin: 1rem;
+    }
+
+}

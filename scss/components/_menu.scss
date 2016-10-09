@@ -1,10 +1,18 @@
 .menu {
-    background-color: $color2;
-    color: $color1;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+    background-color: $color1;
+    &--dark {
+      background-color: $color2;
+      color: $color1;
+    }
+
     width: 100%;
+
+    &--bottom{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 
     @media screen and (min-width: $break-large) {
         top: auto;
