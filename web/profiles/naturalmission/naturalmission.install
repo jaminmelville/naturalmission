@@ -7,6 +7,7 @@ use Drupal\user\Entity\User;
 use Drupal\node\Entity\Node;
 use Drupal\user\RoleInterface;
 use Drupal\shortcut\Entity\Shortcut;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
 
 /**
  * Implements hook_install().
@@ -25,8 +26,44 @@ function naturalmission_install()
   ]);
   $node->save();
 
-  // Set front page to "node".
+  // Set front page to "homepage".
   \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node/1')->save(true);
+
+  MenuLinkContent::create([
+    'title' => 'About',
+    'link' => ['uri' => 'internal:/#about'],
+    'menu_name' => 'main',
+    'weight' => 5,
+  ])->save();
+
+  MenuLinkContent::create([
+    'title' => 'Services',
+    'link' => ['uri' => 'internal:/#services'],
+    'menu_name' => 'main',
+    'weight' => 5,
+  ])->save();
+
+  MenuLinkContent::create([
+    'title' => 'Resources',
+    'link' => ['uri' => 'internal:/#resources'],
+    'menu_name' => 'main',
+    'weight' => 5,
+  ])->save();
+
+  MenuLinkContent::create([
+    'title' => 'Contact',
+    'link' => ['uri' => 'internal:/#contact'],
+    'menu_name' => 'main',
+    'weight' => 5,
+  ])->save();
+
+  MenuLinkContent::create([
+    'title' => 'Articles',
+    'link' => ['uri' => 'internal:/articles'],
+    'menu_name' => 'main',
+    'weight' => 5,
+  ])->save();
+
 
   // Allow visitor account creation with administrative approval.
   $user_settings = \Drupal::configFactory()->getEditable('user.settings');

@@ -10817,7 +10817,7 @@
 	        (0, _jquery2.default)('.menu__items').removeClass('menu__items--open');
 	        var target = (0, _jquery2.default)(this).data('scroll-target');
 	        console.log(target);
-	        (0, _jquery2.default)("html, body").animate({ scrollTop: (0, _jquery2.default)('[data-scroll="' + target + '"]').offset().top }, 1000);
+	        (0, _jquery2.default)("html, body").animate({ scrollTop: (0, _jquery2.default)('#' + target).offset().top }, 1000);
 	    });
 
 	    (0, _jquery2.default)('.js-menu-button').on('click', function () {

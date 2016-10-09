@@ -5,7 +5,7 @@ $(document).ready(() => {
         $('.menu__items').removeClass('menu__items--open')
         var target = $(this).data('scroll-target')
         console.log(target)
-        $("html, body").animate({ scrollTop: $('[data-scroll="' + target + '"]').offset().top}, 1000)
+        $("html, body").animate({ scrollTop: $('#' + target).offset().top}, 1000)
     })
 
     $('.js-menu-button').on('click', () => {
