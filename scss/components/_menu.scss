@@ -1,22 +1,23 @@
 .menu {
-
     background-color: $color1;
+    width: 100%;
+
+    // @TODO: this is wrong. Find a way to add class to menu based on page.
     &--dark {
       background-color: $color2;
       color: $color1;
     }
 
-    width: 100%;
 
-    &--bottom{
+    &--bottom {
         position: absolute;
         top: 0;
         left: 0;
-    }
 
-    @media screen and (min-width: $break-large) {
-        top: auto;
-        bottom: 0;
+        @media screen and (min-width: $break-large) {
+            top: auto;
+            bottom: 0;
+        }
     }
 
     &__button {

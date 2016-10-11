@@ -1,0 +1,36 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  &__item {
+    flex: 0 0 33%;
+    overflow: hidden;
+    padding: 1em;
+    margin: 1em 0;
+  }
+
+  &__image {
+    background-color: $color1;
+    padding: 0 1em;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    background-color: $color1;
+    padding: 0.5em;
+  }
+
+  &__text {
+    background-color: $color1;
+    max-height: 6.5em;
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: justify;
+    padding: 1em;
+  }
+}

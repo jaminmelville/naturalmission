@@ -4,10 +4,10 @@ dependencies: {  }
 name: extra_large
 label: 'Extra Large (640x640)'
 effects:
-    -
-        uuid: ''
-        id: image_scale_and_crop
-        weight: 1
-        data:
-            width: 640
-            height: 640
+  1cfec298-8620-4749-b100-ccb6c4500778:
+    uuid: 1cfec298-8620-4749-b100-ccb6c4500778
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 640

@@ -8,15 +8,15 @@ label: 'Content URL'
 type: 'canonical_entities:node'
 pattern: '[node:content-type]/[node:title]'
 selection_criteria:
-  -
+  a5f96307-1738-48c9-ba98-51f28c75c0eb:
     id: node_type
     bundles:
       article: article
-      home_page: home_page
       page: page
     negate: false
     context_mapping:
       node: node
+    uuid: a5f96307-1738-48c9-ba98-51f28c75c0eb
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -10813,11 +10813,14 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	(0, _jquery2.default)(document).ready(function () {
-	    (0, _jquery2.default)('.js-menu__item').on('click', function () {
+	    (0, _jquery2.default)('.js-menu__item').on('click', function (e) {
 	        (0, _jquery2.default)('.menu__items').removeClass('menu__items--open');
-	        var target = (0, _jquery2.default)(this).data('scroll-target');
+	        var target = (0, _jquery2.default)(this).find('a').attr('href').match(/#.*/).pop();
 	        console.log(target);
-	        (0, _jquery2.default)("html, body").animate({ scrollTop: (0, _jquery2.default)('#' + target).offset().top }, 1000);
+	        if ((0, _jquery2.default)(target).length) {
+	            e.preventDefault();
+	            (0, _jquery2.default)("html, body").animate({ scrollTop: (0, _jquery2.default)(target).offset().top }, 1000);
+	        }
 	    });
 
 	    (0, _jquery2.default)('.js-menu-button').on('click', function () {

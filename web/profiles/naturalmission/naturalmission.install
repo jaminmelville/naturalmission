@@ -22,7 +22,7 @@ function naturalmission_install()
   $node = Node::create([
     'type' => 'home_page',
     'title' => 'Home page',
-    'uid' => '0',
+    'uid' => 1,
   ]);
   $node->save();
 
@@ -33,35 +33,28 @@ function naturalmission_install()
     'title' => 'About',
     'link' => ['uri' => 'internal:/#about'],
     'menu_name' => 'main',
-    'weight' => 5,
+    'weight' => 2,
   ])->save();
 
   MenuLinkContent::create([
     'title' => 'Services',
     'link' => ['uri' => 'internal:/#services'],
     'menu_name' => 'main',
-    'weight' => 5,
+    'weight' => 3,
   ])->save();
 
   MenuLinkContent::create([
     'title' => 'Resources',
     'link' => ['uri' => 'internal:/#resources'],
     'menu_name' => 'main',
-    'weight' => 5,
+    'weight' => 4,
   ])->save();
 
   MenuLinkContent::create([
     'title' => 'Contact',
     'link' => ['uri' => 'internal:/#contact'],
     'menu_name' => 'main',
-    'weight' => 5,
-  ])->save();
-
-  MenuLinkContent::create([
-    'title' => 'Articles',
-    'link' => ['uri' => 'internal:/articles'],
-    'menu_name' => 'main',
-    'weight' => 5,
+    'weight' => 6,
   ])->save();
 
 

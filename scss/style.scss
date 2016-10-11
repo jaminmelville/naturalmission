@@ -10,10 +10,14 @@ a {
 }
 
 body {
+    background-color: #fbfbfb;
     background-image: url('/themes/custom/naturalmission/images/black-thread-light.png');
     font-family: monospace;
     overflow-x: hidden;
     width: 100%;
+}
+.background {
+   background-image: url('/themes/custom/naturalmission/images/black-thread-light.png');
 }
 
 img {
@@ -39,7 +43,9 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.6.3/fonts";
 @import 'components/form';
 @import 'components/landing';
 @import 'components/link-blocks';
+@import 'components/list';
 @import 'components/menu';
+@import 'components/pager';
 @import 'components/region';
 @import 'components/recent';
 @import 'components/section';
