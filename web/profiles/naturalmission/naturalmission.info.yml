@@ -1,6 +1,6 @@
 name: naturalmission
 type: profile
-description: 'Install with commonly used features pre-configured.'
+description: 'Natural Mission profile.'
 version: VERSION
 core: 8.x
 dependencies:
@@ -38,6 +38,10 @@ dependencies:
   - automated_cron
   - paragraphs
   - pathauto
+  - google_analytics
+  - metatag
+  - metatag_open_graph
+# @TODO: when it's working:  - disqus
 themes:
   - naturalmission
   - seven

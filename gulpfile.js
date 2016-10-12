@@ -126,3 +126,17 @@ gulp.task('browser-sync', () => {
     })
     gulp.watch("web/themes/**/*").on('change', browserSync.reload);
 })
+
+gulp.task('debug', (callback) => {
+    async.series([
+        (cb) => {
+            runCommandInContainer('phpenmod xdebug', cb)
+        },
+        (cb) => {
+            runCommandInContainer('chmod -R 777 web/sites/default', cb)
+        },
+        (cb) => {
+            runDrupalCommand('drupal module:install devel devel_generate devel_kint', cb)
+        }
+    ], callback)
+})

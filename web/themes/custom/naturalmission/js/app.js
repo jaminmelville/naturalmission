@@ -10812,20 +10812,45 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _jquery2.default)(document).ready(function () {
-	    (0, _jquery2.default)('.js-menu__item').on('click', function (e) {
-	        (0, _jquery2.default)('.menu__items').removeClass('menu__items--open');
-	        var target = (0, _jquery2.default)(this).find('a').attr('href').match(/#.*/).pop();
-	        console.log(target);
-	        if ((0, _jquery2.default)(target).length) {
-	            e.preventDefault();
-	            (0, _jquery2.default)("html, body").animate({ scrollTop: (0, _jquery2.default)(target).offset().top }, 1000);
-	        }
-	    });
+	(0, _jquery2.default)('.js-menu__item').on('click', function (e) {
+	  (0, _jquery2.default)('.menu__items').removeClass('menu__items--open');
+	  var target = (0, _jquery2.default)(this).find('a').attr('href').match(/#.*/).pop();
+	  console.log(target);
+	  if ((0, _jquery2.default)(target).length) {
+	    e.preventDefault();
+	    (0, _jquery2.default)("html, body").animate({ scrollTop: (0, _jquery2.default)(target).offset().top }, 1000);
+	  }
+	});
 
-	    (0, _jquery2.default)('.js-menu-button').on('click', function () {
-	        (0, _jquery2.default)('.menu__items').toggleClass('menu__items--open');
-	    });
+	(0, _jquery2.default)('.js-menu-button').on('click', function () {
+	  (0, _jquery2.default)('.menu__items').toggleClass('menu__items--open');
+	});
+
+	var search = function search() {
+	  var url = '/search/node?keys=' + encodeURIComponent((0, _jquery2.default)('.menu__search-input').val()) + '&f[0]=type%3Aarticle';
+	  window.location = url;
+	};
+
+	(0, _jquery2.default)('.js-search__button').on('click', function (e) {
+	  e.stopPropagation();
+	  if ((0, _jquery2.default)('.menu__search-input').hasClass('menu__search-input--hidden')) {
+	    (0, _jquery2.default)('.menu__search-input').removeClass('menu__search-input--hidden').focus();
+	  } else {
+	    search();
+	  }
+	});
+
+	(0, _jquery2.default)(document).on('click', function () {
+	  (0, _jquery2.default)('.menu__search-input').addClass('menu__search-input--hidden');
+	  (0, _jquery2.default)('.menu__search-input').val('');
+	});
+
+	(0, _jquery2.default)('.js-search__input').on('keypress', function (e) {
+	  if (e.keyCode == 13) {
+	    search();
+	  }
+	}).on('click', function (e) {
+	  e.stopPropagation();
 	});
 
 /***/ }

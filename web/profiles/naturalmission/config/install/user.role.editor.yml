@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 1
+is_admin: null
+permissions:
+  - 'administer blocks'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'access content overview'
+  - 'administer nodes'
+  - 'view own unpublished content'
+  - 'create article content'
+  - 'delete any article content'
+  - 'edit any article content'
+  - 'edit any home_page content'
+  - 'administer menu'
+  - 'link to any page'
+  - 'access administration pages'
+  - 'administer taxonomy'
+  - 'delete terms in tags'
+  - 'edit terms in tags'
+  - 'access toolbar'
+  - 'change own username'
+  - 'view the administration theme'

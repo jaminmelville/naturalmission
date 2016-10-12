@@ -57,5 +57,27 @@
             display: inline-block;
             margin: 0.7em 2em;
         }
+
+        &--search {
+          vertical-align: baseline;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
     }
+    &__search-input {
+        margin: 0;
+        padding: 0;
+        border: 1px solid $color3;
+        font: inherit;
+        width: 10em;
+        text-transform: uppercase;
+        line-height: 1.5em;
+        transition: width 0.5s;
+        text-align: center;
+        &--hidden {
+          border:none;
+          width: 0px;
+        }
+    }
+
 }

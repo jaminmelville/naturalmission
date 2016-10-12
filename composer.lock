@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d5d90914aeb4e02c170328e084513652",
-    "content-hash": "a04f5f3257bf24f15b52991a7cd68994",
+    "hash": "b325d7baf5a80eab03d76d927099e72f",
+    "content-hash": "9d53ce51b946d8d916308036a4f6a3eb",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1022,6 +1022,36 @@
             "time": "2014-09-09 13:34:57"
         },
         {
+            "name": "drexarj/disqus-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drexarj/disqus-php.git",
+                "reference": "67b735ac012443be7523b7d609edbcbc7e8e67eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drexarj/disqus-php/zipball/67b735ac012443be7523b7d609edbcbc7e8e67eb",
+                "reference": "67b735ac012443be7523b7d609edbcbc7e8e67eb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "project",
+            "autoload": {
+                "classmap": {
+                    "": "disqusapi/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "The official PHP client library for disqus, with added composer.json.",
+            "time": "2013-11-07 10:47:07"
+        },
+        {
             "name": "drupal-composer/drupal-scaffold",
             "version": "2.1.0",
             "source": {
@@ -1492,6 +1522,39 @@
             "time": "2016-08-20 19:59:03"
         },
         {
+            "name": "drupal/disqus",
+            "version": "8.1.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/disqus",
+                "reference": "1b30b8253b52ad842c21519b6ef84a8004d4a2b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/disqus-8.x-1.0-rc2.zip",
+                "reference": "1b30b8253b52ad842c21519b6ef84a8004d4a2b5",
+                "shasum": null
+            },
+            "require": {
+                "drexarj/disqus-php": "dev-master",
+                "drupal/core": "8.*",
+                "drupal/field": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Uses the Disqus web service to enhance comments.",
+            "homepage": "http://drupal.org/project/disqus",
+            "time": "2016-10-03 06:39:48"
+        },
+        {
             "name": "drupal/entity_reference_revisions",
             "version": "8.1.0",
             "source": {
@@ -1521,6 +1584,100 @@
             "description": "Adds a Entity Reference field type with revision support.",
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "time": "2016-07-21 15:50:27"
+        },
+        {
+            "name": "drupal/google_analytics",
+            "version": "8.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/google_analytics",
+                "reference": "5a44ad5643af5510ec15c07727ce0d124ee1c1c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_analytics-8.x-2.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-2.x": "8.2.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "hass",
+                    "homepage": "https://www.drupal.org/u/hass"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/49388/committers"
+                }
+            ],
+            "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
+            "homepage": "https://www.drupal.org/project/google_analytics",
+            "time": "2016-08-09 21:26:53"
+        },
+        {
+            "name": "drupal/metatag",
+            "version": "8.1.0-beta10",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/metatag",
+                "reference": "c0610ad2ad9318298823c24db66b8769095910a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.0-beta10.zip",
+                "reference": "c0610ad2ad9318298823c24db66b8769095910a3",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/field": "8.*",
+                "drupal/token": "8.*"
+            },
+            "replace": {
+                "drupal/metatag_google_plus": "self.version",
+                "drupal/metatag_open_graph": "self.version",
+                "drupal/metatag_twitter_cards": "self.version",
+                "drupal/metatag_verification": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/metatag_google_plus, drupal/metatag_open_graph, drupal/metatag_twitter_cards, drupal/metatag_verification"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/640498/committers",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Manage meta tags for all entities.",
+            "homepage": "https://www.drupal.org/project/metatag",
+            "keywords": [
+                "php",
+                "seo"
+            ],
+            "time": "2016-08-22 17:45:58"
         },
         {
             "name": "drupal/paragraphs",
@@ -1582,7 +1739,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-beta1.zip",
-                "reference": null,
+                "reference": "05a0bc51694b70efb697b3c8b175f2884bff7b34",
                 "shasum": null
             },
             "require": {
