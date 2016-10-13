@@ -52,6 +52,7 @@
 	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(11);
+	__webpack_require__(12);
 
 /***/ },
 /* 1 */
@@ -10815,7 +10816,6 @@
 	(0, _jquery2.default)('.js-menu__item').on('click', function (e) {
 	  (0, _jquery2.default)('.menu__items').removeClass('menu__items--open');
 	  var target = (0, _jquery2.default)(this).find('a').attr('href').match(/#.*/).pop();
-	  console.log(target);
 	  if ((0, _jquery2.default)(target).length) {
 	    e.preventDefault();
 	    (0, _jquery2.default)("html, body").animate({ scrollTop: (0, _jquery2.default)(target).offset().top }, 1000);
@@ -10826,17 +10826,10 @@
 	  (0, _jquery2.default)('.menu__items').toggleClass('menu__items--open');
 	});
 
-	var search = function search() {
-	  var url = '/search/node?keys=' + encodeURIComponent((0, _jquery2.default)('.menu__search-input').val()) + '&f[0]=type%3Aarticle';
-	  window.location = url;
-	};
-
-	(0, _jquery2.default)('.js-search__button').on('click', function (e) {
-	  e.stopPropagation();
-	  if ((0, _jquery2.default)('.menu__search-input').hasClass('menu__search-input--hidden')) {
-	    (0, _jquery2.default)('.menu__search-input').removeClass('menu__search-input--hidden').focus();
-	  } else {
-	    search();
+	(0, _jquery2.default)('.js-menu__search-button').on('click', function (e) {
+	  var $input = (0, _jquery2.default)(e.currentTarget).closest('.js-search').find('.js-search__input');
+	  if ($input.hasClass('menu__search-input--hidden')) {
+	    $input.removeClass('menu__search-input--hidden').focus();
 	  }
 	});
 
@@ -10845,12 +10838,39 @@
 	  (0, _jquery2.default)('.menu__search-input').val('');
 	});
 
+	(0, _jquery2.default)('.js-search').on('click', function (e) {
+	  e.stopPropagation();
+	});
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _jquery = __webpack_require__(6);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// @TODO: DRY.
+	var search = function search(term) {
+	  var url = '/search/node?keys=' + encodeURIComponent(term);
+	  window.location = url;
+	};
+
 	(0, _jquery2.default)('.js-search__input').on('keypress', function (e) {
 	  if (e.keyCode == 13) {
-	    search();
+	    search((0, _jquery2.default)(e.currentTarget).val());
 	  }
-	}).on('click', function (e) {
-	  e.stopPropagation();
+	});
+
+	(0, _jquery2.default)('.js-search__button').on('click', function (e) {
+	  var $input = (0, _jquery2.default)(e.currentTarget).closest('.js-search').find('.js-search__input');
+	  if ($input.val()) {
+	    search($input.val());
+	  }
 	});
 
 /***/ }

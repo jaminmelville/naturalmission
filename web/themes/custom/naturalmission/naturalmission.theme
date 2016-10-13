@@ -63,7 +63,7 @@ function naturalmission_theme_suggestions_node_alter(array &$suggestions, array 
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function naturalmission_preprocess_block(array &$variables) {
-
+$ben = 'here';
 }
 
 /**
@@ -158,4 +158,8 @@ function naturalmission_form_user_login_form_alter(&$form, $form_state, $form_id
 
 function naturalmission_form_search_form_alter(&$form, $form_state, $form_id) {
     $form['name']['#form_id'] = $form_id;
+}
+
+function naturalmission_preprocess_item_list__search_results(&$variables)  {
+    // @TODO: add image to search result.
 }

@@ -65,6 +65,11 @@ img {
   height: auto;
   max-width: 100%; }
 
+h2 {
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase; }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -2664,6 +2669,20 @@ input:-webkit-autofill:active {
   padding: 2em;
   margin: 2em 0;
   background-color: #ffffff; }
+  .result__search {
+    text-align: center; }
+  .result__search-input {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    padding: 0 1em;
+    border: 1px solid black;
+    margin: 1em 0; }
+  .result__search-button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.5s; }
+    .result__search-button:hover {
+      color: #ff008d; }
   .result__title {
     color: #ff008d;
     font-size: 1.5rem;

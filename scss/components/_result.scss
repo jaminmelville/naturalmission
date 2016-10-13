@@ -3,6 +3,27 @@
   margin:2em 0;
   background-color: $color1;
 
+  &__search {
+    text-align: center;
+  }
+
+  &__search-input {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    padding: 0 1em;
+    border: 1px solid black;
+    margin: 1em 0;
+  }
+
+  &__search-button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.5s;
+    &:hover {
+        color: $color3;
+    }
+  }
+
   &__title {
     color: $color3;
     font-size: 1.5rem;

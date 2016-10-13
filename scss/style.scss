@@ -25,6 +25,13 @@ img {
     max-width: 100%;
 }
 
+// @TODO: add class to search results page h2.
+h2 {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

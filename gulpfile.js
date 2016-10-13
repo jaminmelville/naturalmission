@@ -133,10 +133,10 @@ gulp.task('debug', (callback) => {
             runCommandInContainer('phpenmod xdebug', cb)
         },
         (cb) => {
-            runCommandInContainer('chmod -R 777 web/sites/default', cb)
+            runDrupalCommand('module:install devel devel_generate kint', cb)
         },
         (cb) => {
-            runDrupalCommand('drupal module:install devel devel_generate devel_kint', cb)
+            runCommandInContainer('chmod -R 777 web/sites/default', cb)
         }
     ], callback)
 })

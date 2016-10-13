@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: resource_url
+label: 'Resource URL'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  ef57c47a-f142-467d-b2e1-eca940836431:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ef57c47a-f142-467d-b2e1-eca940836431
+selection_logic: and
+weight: -5
+relationships: {  }
