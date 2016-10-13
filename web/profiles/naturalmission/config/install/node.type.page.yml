@@ -1,9 +1,9 @@
 langcode: en
 status: true
 dependencies: {  }
-name: 'Basic page'
+name: 'Page'
 type: page
-description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
+description: 'Page for resource content with file uploads.'
 help: ''
 new_revision: false
 preview_mode: 1

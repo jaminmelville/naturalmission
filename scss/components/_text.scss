@@ -22,4 +22,11 @@
     p {
         margin-bottom: 1em;
     }
+
+    img {
+      margin: 1em auto;
+      width: 50%; // @TODO: mobile first.
+      padding: 0.5em;
+      border: 1px solid $color5;
+    }
 }

@@ -1,0 +1,17 @@
+.file {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+
+    a[href$=".pdf"]:before {
+      content: "\f1c1";
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      margin: 0 0.5em;
+    }
+
+    a:hover {
+      color: $color3;
+    }
+}

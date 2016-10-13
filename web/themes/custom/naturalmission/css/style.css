@@ -2365,6 +2365,19 @@ input:-webkit-autofill:active {
     .contact__value a:hover {
       color: #ff008d; }
 
+.file {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center; }
+  .file a[href$=".pdf"]:before {
+    content: "\F1C1";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    margin: 0 0.5em; }
+  .file a:hover {
+    color: #ff008d; }
+
 .form__element {
   margin: 1.5em 0; }
 
@@ -2665,6 +2678,10 @@ input:-webkit-autofill:active {
       flex: 0 0 320px;
   margin: 1rem; }
 
+.resource {
+  padding: 1em;
+  background-color: #ffffff; }
+
 .result {
   padding: 2em;
   margin: 2em 0;
@@ -2761,6 +2778,11 @@ input:-webkit-autofill:active {
     list-style: circle; }
   .text p {
     margin-bottom: 1em; }
+  .text img {
+    margin: 1em auto;
+    width: 50%;
+    padding: 0.5em;
+    border: 1px solid #444444; }
 
 .title {
   font-family: 'Conv_cafeandbrewery';

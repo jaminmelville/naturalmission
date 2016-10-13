@@ -8,14 +8,13 @@ label: 'Article URL'
 type: 'canonical_entities:node'
 pattern: '[node:content-type]/[node:title]'
 selection_criteria:
-  1d9ff219-8015-49f0-9655-56fa5c57a23b:
+  -
     id: node_type
     bundles:
       article: article
     negate: false
     context_mapping:
       node: node
-    uuid: 1d9ff219-8015-49f0-9655-56fa5c57a23b
 selection_logic: and
 weight: -5
 relationships: {  }
