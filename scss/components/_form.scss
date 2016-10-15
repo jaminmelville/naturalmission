@@ -5,7 +5,7 @@
 
   &__element-inner {
     background-color: transparentize($color1, 0.5);
-    border: 1px solid black;
+    border: 1px solid $color2;
     display: flex !important; // @TODO: remove need for important by removing drupal css.
     font-size: 1.5rem;
     line-height: 2em;
@@ -13,7 +13,7 @@
   }
 
   &__label {
-    border-right: 1px solid black;
+    border-right: 1px solid $color2;
     padding-right: 1em;
   }
 
@@ -28,7 +28,7 @@
 
     &--bordered {
       background-color: transparentize($color1, 0.5);
-      border: 1px solid black;
+      border: 1px solid $color2;
       margin-top: 1em;
       padding-right: 1em;
     }

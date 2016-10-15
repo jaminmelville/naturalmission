@@ -5,12 +5,15 @@
 
   &__item {
     flex: 0 0 100%;
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 0 1em 2em;
     @media screen and (min-width: $break-medium) {
+      flex: 0 0 50%;
+    }
+    @media screen and (min-width: $break-large) {
       flex: 0 0 33%;
     }
-    margin: 1em 0;
-    overflow: hidden;
-    padding: 1em;
   }
 
   &__image {
@@ -30,9 +33,8 @@
 
   &__text {
     background-color: $color1;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
-    max-height: 6.5em;
     padding: 1em;
     text-align: justify;
   }

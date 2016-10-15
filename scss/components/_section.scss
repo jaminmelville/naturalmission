@@ -6,9 +6,10 @@
   &--full-height {
     min-height: 100vh;
   }
-
-  &--no-mouse {
-    pointer-events: none;
+  @media screen and (min-width: $break-large) {
+    &--no-mouse {
+      pointer-events: none;
+    }
   }
 
   &__content {

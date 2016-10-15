@@ -5,12 +5,12 @@
   <div class='link-blocks__content'>
     <div class='link-blocks__inner-content'>
       <div class='link-blocks__name'>{{ content.field_link_block_title }}</div>
-      <div class='link-blocks__description'>{{ content.field_link_block_description }}</div>
       {% if content.field_link_block_link.0['#url'] %}
-      <a class='link-blocks__link' target='_blank' href='{{ content.field_link_block_link.0['#url'] }}'>
+      <a class='link-blocks__link js-link-block__link' target='_blank' href='{{ content.field_link_block_link.0['#url'] }}'>
         <i class="fa fa-link fa-3x" aria-hidden="true"></i>
       </a>
       {% endif %}
+      <div class='link-blocks__description'>{{ content.field_link_block_description }}</div>
     </div>
   </div>
 </li>

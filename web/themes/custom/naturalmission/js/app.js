@@ -47,13 +47,13 @@
 	'use strict';
 
 	__webpack_require__(1);
-	__webpack_require__(4);
-	__webpack_require__(6);
+	__webpack_require__(5);
 	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(9);
-	__webpack_require__(11);
+	__webpack_require__(10);
 	__webpack_require__(12);
+	__webpack_require__(13);
 
 /***/ },
 /* 1 */
@@ -64,12 +64,13 @@
 /***/ },
 /* 2 */,
 /* 3 */,
-/* 4 */
+/* 4 */,
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -86,7 +87,7 @@
 	setBackgroundColor();
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10312,12 +10313,12 @@
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -10343,12 +10344,12 @@
 	});
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -10363,16 +10364,18 @@
 	setLandingOpacity();
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var activationTime = 0;
 
 	(0, _jquery2.default)(document).on('click', function () {
 	    (0, _jquery2.default)('.js-link-block').removeClass('link-blocks--active');
@@ -10382,30 +10385,40 @@
 	    e.stopPropagation();
 	    (0, _jquery2.default)('.js-link-block').removeClass('link-blocks--active');
 	    (0, _jquery2.default)(e.currentTarget).addClass('link-blocks--active');
+	    activationTime = new Date().getTime();
 	});
 
 	(0, _jquery2.default)('.js-link-block').on('mouseover', function (e) {
 	    (0, _jquery2.default)('.js-link-block').removeClass('link-blocks--active');
 	    (0, _jquery2.default)(e.currentTarget).addClass('link-blocks--active');
+	    activationTime = new Date().getTime();
 	});
 
 	(0, _jquery2.default)('.js-link-block').on('mouseout', function () {
 	    (0, _jquery2.default)('.js-link-block').removeClass('link-blocks--active');
 	});
 
+	(0, _jquery2.default)('.js-link-block__link').on('click', function (e) {
+	    e.stopPropagation();
+	    var tooSoon = new Date().getTime() - activationTime < 200;
+	    if (tooSoon) {
+	        e.preventDefault();
+	    }
+	});
+
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var GoogleMapsLoader = __webpack_require__(10);
+	var GoogleMapsLoader = __webpack_require__(11);
 
 	GoogleMapsLoader.KEY = 'AIzaSyDId3kWjcDVdlFOzosFkm78XaFAH8PWiYQ';
 
@@ -10596,7 +10609,7 @@
 	}
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
@@ -10821,12 +10834,12 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -10862,18 +10875,17 @@
 	});
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// @TODO: DRY.
 	var search = function search(term) {
 	  var url = '/search/node?keys=' + encodeURIComponent(term);
 	  window.location = url;
@@ -10891,6 +10903,13 @@
 	    search($input.val());
 	  }
 	});
+
+	// @TODO: Get same result form server side. Feeling dirty..
+	if (window.location.pathname.startsWith('/search/')) {
+	  (0, _jquery2.default)('#block-mainpagecontent > h2').remove();
+	  var term = (0, _jquery2.default)('h1').text().replace('Search for ', '');
+	  (0, _jquery2.default)('h1').html('Search results for <i>\'' + term + '\'</i>');
+	}
 
 /***/ }
 /******/ ]);

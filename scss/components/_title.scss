@@ -1,9 +1,21 @@
 .title {
+  color: $color2;
   font-family: 'Conv_cafeandbrewery';
   font-size: 2rem;
-  margin: 0.5em 0;
+  margin: 2em 0;
 
   &--center {
     text-align: center;
+  }
+  @media screen and (min-width: $break-medium) {
+    &--right-center {
+      margin-left: 50%;
+      text-align: center;
+    }
+  }
+
+  i {
+    color: $color4;
+    font-family: 'Conv_Airplanes in the Night Sky';
   }
 }

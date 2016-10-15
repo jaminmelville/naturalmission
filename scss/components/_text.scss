@@ -1,7 +1,6 @@
 .text {
   font-size: 1.1rem;
   line-height: 1.5em;
-  margin: 3em 0;
   text-align: justify;
 
   &--columns {
@@ -20,7 +19,7 @@
   }
 
   img {
-    border: 1px solid rgb(128, 128, 128);
+    border: 1px solid $color6;
     margin: 1em auto;
     padding: 0.5em;
     @media screen and (min-width: $break-medium) {

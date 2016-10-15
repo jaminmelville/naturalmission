@@ -1,6 +1,5 @@
 import $ from 'jquery'
 
-// @TODO: DRY.
 let search = (term) => {
   let url = '/search/node?keys=' + encodeURIComponent(term)
   window.location = url
@@ -18,3 +17,10 @@ $('.js-search__button').on('click', (e) => {
     search($input.val())
   }
 })
+
+// @TODO: Get same result form server side. Feeling dirty..
+if (window.location.pathname.startsWith('/search/')) {
+  $('#block-mainpagecontent > h2').remove()
+  let term = $('h1').text().replace('Search for ', '')
+  $('h1').html('Search results for <i>\'' + term + '\'</i>')
+}

@@ -1,5 +1,5 @@
 .article {
-  background-color: white;
+  background-color: $color1;
 
   &__content {
     padding: 2rem;
@@ -13,6 +13,6 @@
   &__date {
     color: rgb(210, 105, 90);
     font-size: 1rem;
-    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 }

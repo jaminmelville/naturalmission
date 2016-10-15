@@ -1,7 +1,10 @@
 .contact {
   &__map {
     @include fill;
-    pointer-events: all;
+    pointer-events: none;
+    @media screen and (min-width: $break-medium) {
+      pointer-events: all;
+    }
   }
 
   &__content {
@@ -14,7 +17,7 @@
   }
 
   &__options {
-    color: rgb(128, 128, 128);
+    color: $color4;
     display: flex;
     flex: 0 0 100%;
     flex-wrap: wrap;
@@ -52,7 +55,7 @@
   &__value {
     background-color: transparentize($color1, 0.5);
     display: none;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin: 1em 0;
     padding: 2em 1em;
     pointer-events: all;

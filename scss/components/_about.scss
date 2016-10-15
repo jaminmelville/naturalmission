@@ -7,7 +7,7 @@
 
   &__profile {
     flex: 0 0 100%;
-    padding: 0 25%;
+    padding: 0 25% 2em;
     text-align: center;
     @media screen and (min-width: $break-medium) {
       flex: 0 0 25%;

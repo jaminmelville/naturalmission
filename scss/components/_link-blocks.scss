@@ -1,7 +1,7 @@
 .link-blocks {
   align-items: center;
   background-color: $color2;
-  background-image: url('/themes/custom/naturalmission/images/black-thread-light.png');
+  background-image: url('/themes/custom/naturalmission/images/$color2-thread-light.png');
   display: flex;
   flex-wrap: wrap;
 
@@ -38,21 +38,23 @@
   }
 
   &__name {
-    color: white;
+    color: $color1;
     font-family: 'Conv_cafeandbrewery';
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
   }
 
   &__description {
     color: peachpuff;
     display: none;
-    padding: 1em;
+    font-size: 1.3rem;
+    font-weight: bold;
   }
 
   &__link {
     color: $color1;
     display: none;
+    padding: 1em;
     transition: color 0.5s;
 
     &:hover {

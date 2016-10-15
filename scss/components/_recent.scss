@@ -3,6 +3,10 @@
     background-color: $color1;
     font-family: 'Conv_PRINC___';
     font-size: 1.5rem;
+    margin: 0 1rem;
+    @media screen and (min-width: $break-medium) {
+      margin: 0;
+    }
     padding: 0.5em;
     text-align: center;
     text-transform: uppercase;
