@@ -1,7 +1,9 @@
 import $ from 'jquery'
 
-let GoogleMapsLoader = require('google-maps');
-GoogleMapsLoader.KEY = 'AIzaSyDId3kWjcDVdlFOzosFkm78XaFAH8PWiYQ';
+let GoogleMapsLoader = require('google-maps')
+
+GoogleMapsLoader.KEY = 'AIzaSyDId3kWjcDVdlFOzosFkm78XaFAH8PWiYQ'
+
 if ($('.js-map')[0]) {
     GoogleMapsLoader.load((google) => {
         var mapProperties = {

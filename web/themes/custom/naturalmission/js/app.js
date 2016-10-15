@@ -10389,7 +10389,7 @@
 	    (0, _jquery2.default)(e.currentTarget).addClass('link-blocks--active');
 	});
 
-	(0, _jquery2.default)('.js-link-block').on('mouseout', function (e) {
+	(0, _jquery2.default)('.js-link-block').on('mouseout', function () {
 	    (0, _jquery2.default)('.js-link-block').removeClass('link-blocks--active');
 	});
 
@@ -10406,7 +10406,9 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var GoogleMapsLoader = __webpack_require__(10);
+
 	GoogleMapsLoader.KEY = 'AIzaSyDId3kWjcDVdlFOzosFkm78XaFAH8PWiYQ';
+
 	if ((0, _jquery2.default)('.js-map')[0]) {
 	    GoogleMapsLoader.load(function (google) {
 	        var mapProperties = {
@@ -10878,7 +10880,7 @@
 	};
 
 	(0, _jquery2.default)('.js-search__input').on('keypress', function (e) {
-	  if (e.keyCode == 13) {
+	  if (e.keyCode === 13) {
 	    search((0, _jquery2.default)(e.currentTarget).val());
 	  }
 	});

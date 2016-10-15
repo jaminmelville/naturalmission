@@ -7,7 +7,7 @@ let search = (term) => {
 }
 
 $('.js-search__input').on('keypress', (e) => {
-  if (e.keyCode == 13) {
+  if (e.keyCode === 13) {
     search($(e.currentTarget).val())
   }
 })

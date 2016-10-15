@@ -15,6 +15,6 @@ $('.js-link-block').on('mouseover', (e) => {
     $(e.currentTarget).addClass('link-blocks--active')
 })
 
-$('.js-link-block').on('mouseout', (e) => {
+$('.js-link-block').on('mouseout', () => {
     $('.js-link-block').removeClass('link-blocks--active')
 })
