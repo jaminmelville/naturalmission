@@ -1,58 +1,57 @@
 .landing {
-    align-items: center;
-    display: flex;
-    min-height: 100vh;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+
+  &__text {
+    background-color: transparentize($color2, 0.5);
+    color: $color1;
+    font-size: 1rem;
+    padding: 2em 0.5em;
     position: relative;
+    text-align: right;
+    width: 100%;
 
-    &__text {
-        background-color: transparentize($color2, 0.5);
-        color: $color1;
-        padding: 2em 0.5em;
-        position: relative;
-        text-align: right;
-        width: 100%;
-        font-size: 1rem;
-
-        &--imaged {
-            background-image: url('https://static.pexels.com/photos/625/field-summer-sun-meadow-large.jpg');
-            background-size: cover;
-            background-position: center center;
-        }
-
-        @media screen and (min-width: $break-medium) {
-            font-size: 1.5rem;
-            padding: 2em;
-        }
+    &--imaged {
+      background-image: url('https://static.pexels.com/photos/625/field-summer-sun-meadow-large.jpg');
+      background-position: center center;
+      background-size: cover;
     }
-
-    &__title {
-        font-family: 'Conv_cafeandbrewery';
-        font-size: 2.7em;
-
-        @media screen and (min-width: $break-medium) {
-            font-size: 2.79em;
-        }
+    @media screen and (min-width: $break-medium) {
+      font-size: 1.5rem;
+      padding: 2em;
     }
+  }
 
-    &__subtitle {
-        font-size: 0.9em;
-        letter-spacing: 0.39em;
-        margin-top: -0.8em;
-        margin-right: -0.4em;
-   }
-
-    &__video-wrapper {
-        height: 100%;
-        left: 0;
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        width: 100%;
+  &__title {
+    font-family: 'Conv_cafeandbrewery';
+    font-size: 2.7em;
+    @media screen and (min-width: $break-medium) {
+      font-size: 2.79em;
     }
+  }
 
-    &__video {
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
-    }
+  &__subtitle {
+    font-family: 'Conv_cafeandbrewery';
+    font-size: 0.9em;
+    letter-spacing: 0.36em;
+    margin-right: -0.4em;
+    margin-top: -0.6em;
+  }
+
+  &__video-wrapper {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__video {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
 }

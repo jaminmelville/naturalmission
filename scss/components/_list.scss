@@ -1,13 +1,16 @@
 .list {
+  align-items: stretch;
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
 
   &__item {
-    flex: 0 0 33%;
+    flex: 0 0 100%;
+    @media screen and (min-width: $break-medium) {
+      flex: 0 0 33%;
+    }
+    margin: 1em 0;
     overflow: hidden;
     padding: 1em;
-    margin: 1em 0;
   }
 
   &__image {
@@ -16,21 +19,21 @@
   }
 
   &__title {
+    background-color: $color1;
+    display: block;
     font-size: 1.5rem;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    background-color: $color1;
     padding: 0.5em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   &__text {
     background-color: $color1;
-    max-height: 6.5em;
     font-size: 1rem;
     line-height: 1.5em;
-    text-align: justify;
+    max-height: 6.5em;
     padding: 1em;
+    text-align: justify;
   }
 }

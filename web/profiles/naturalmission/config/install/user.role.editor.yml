@@ -25,3 +25,6 @@ permissions:
   - 'access toolbar'
   - 'change own username'
   - 'view the administration theme'
+  - 'create page content'
+  - 'delete any page content'
+  - 'edit any page content'

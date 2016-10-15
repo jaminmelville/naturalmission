@@ -1,6 +1,7 @@
 require('./../scss/style.scss')
 require('./components/background.js')
 require('./components/contact.js')
+require('./components/landing.js')
 require('./components/link-blocks.js')
 require('./components/map.js')
 require('./components/menu.js')

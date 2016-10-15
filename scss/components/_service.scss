@@ -1,32 +1,30 @@
 .service {
-    flex: 0 0 100%;
+  flex: 0 0 100%;
+  @media screen and (min-width: $break-medium) {
+    $percentage: 100% / 2;
+    flex: 0 0 $percentage;
+    padding: 0 1em;
+  }
+  @media screen and (min-width: $break-large) {
+    $percentage: 100% / 3;
+    flex: 0 0 $percentage;
+    padding: 0 1em;
+  }
 
-    @media screen and (min-width: $break-medium) {
-        $percentage: 100% / 2;
-        flex: 0 0 $percentage;
-        padding: 0 1em;
-    }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -1em;
+  }
 
-    @media screen and (min-width: $break-large) {
-        $percentage: 100% / 3;
-        flex: 0 0 $percentage;
-        padding: 0 1em;
-    }
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+  }
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 0 -1em;
-    }
-
-    &__title {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    &__icon {
-        width: 50%;
-        margin: 2em auto;
-    }
+  &__icon {
+    margin: 2em auto;
+    width: 50%;
+  }
 }

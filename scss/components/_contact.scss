@@ -1,70 +1,72 @@
 .contact {
-    &__map {
-        @include fill;
-        pointer-events: all;
+  &__map {
+    @include fill;
+    pointer-events: all;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: $break-medium) {
+      flex-wrap: nowrap;
     }
+  }
 
-    &__content {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        @media screen and (min-width: $break-medium) {
-            flex-wrap: nowrap;
-        }
+  &__options {
+    color: rgb(128, 128, 128);
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    @media screen and (min-width: $break-medium) {
+      flex: 0 1 1em;
+      padding: 0 2em;
     }
+  }
 
-    &__options {
-        display: flex;
-        flex: 0 0 100%;
-        flex-wrap: wrap;
-        @media screen and (min-width: $break-medium) {
-            flex: 0 1 1em;
-            padding: 0 2em;
-        }
+  &__values {
+    flex: 1 1 100%;
+    @media screen and (min-width: $break-medium) {
+      padding: 0 2em;
     }
+  }
 
-    &__values {
-        flex: 1 1 100%;
-        @media screen and (min-width: $break-medium) {
-            padding: 0 2em;
-        }
+  &__option {
+    cursor: pointer;
+    flex: 0 0 25%;
+    font-size: 2.5rem;
+    padding: 0.2em 0;
+    pointer-events: all;
+    text-align: center;
+    transition: color 0.5s;
+
+    &--selected,
+    &:hover {
+      color: $color3;
     }
-
-    &__option {
-        cursor: pointer;
-        flex: 0 0 25%;
-        font-size: 2.5rem;
-        padding: 0.2em 0;
-        pointer-events: all;
-        text-align: center;
-        transition: color 0.5s;
-
-        &--selected, &:hover {
-            color: $color3;
-        }
-        @media screen and (min-width: $break-medium) {
-            flex: 0 0 100%;
-        }
+    @media screen and (min-width: $break-medium) {
+      flex: 0 0 100%;
     }
+  }
 
-    &__value {
-        display: none;
-        padding: 2em 1em;
-        font-size: 1.1rem;
-        background-color: transparentize($color1, 0.5);
-        margin: 1em 0;
-        pointer-events: all;
+  &__value {
+    background-color: transparentize($color1, 0.5);
+    display: none;
+    font-size: 1.1rem;
+    margin: 1em 0;
+    padding: 2em 1em;
+    pointer-events: all;
 
-        &--selected {
-            display: block;
-        }
-
-        // @TODO: classname it.
-        a {
-            transition: color 0.5s;
-            &:hover {
-                color: $color3;
-            }
-        }
+    &--selected {
+      display: block;
     }
+    // @TODO: classname it.
+    a {
+      transition: color 0.5s;
+
+      &:hover {
+        color: $color3;
+      }
+    }
+  }
 }

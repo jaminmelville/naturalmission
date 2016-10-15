@@ -1,76 +1,73 @@
 .link-blocks {
+  align-items: center;
+  background-color: $color2;
+  background-image: url('/themes/custom/naturalmission/images/black-thread-light.png');
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 100%;
+    padding-top: 100%;
+    position: relative;
+    @media screen and (min-width: $break-medium) {
+      flex: 0 0 $percentage;
+      $percentage: 100% / 2;
+      padding-top: $percentage;
+    }
+    @media screen and (min-width: $break-large) {
+      flex: 0 0 $percentage;
+      $percentage: 100% / 3;
+      padding-top: $percentage;
+    }
+  }
+
+  &__content {
+    @include fill;
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
-    background-color: $color2;
-    background-image: url("/themes/custom/naturalmission/images/black-thread-light.png");
+    text-align: center;
+    transition: background-color 0.5s;
+  }
 
-    &__item {
-        padding-top: 100%;
-        position: relative;
-        flex: 0 0 100%;
+  &__image img {
+    @include fill;
+  }
 
-        @media screen and (min-width: $break-medium) {
-            $percentage: 100% / 2;
-            padding-top: $percentage;
-            flex: 0 0 $percentage;
-        }
+  &__inner-content {
+    width: 100%;
+  }
 
-        @media screen and (min-width: $break-large) {
-            $percentage: 100% / 3;
-            padding-top: $percentage;
-            flex: 0 0 $percentage;
-        }
+  &__name {
+    color: white;
+    font-family: 'Conv_cafeandbrewery';
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    color: peachpuff;
+    display: none;
+    padding: 1em;
+  }
+
+  &__link {
+    color: $color1;
+    display: none;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $color3;
+    }
+  }
+
+  &--active {
+    .link-blocks__content {
+      background-color: rgba(0, 0, 0, 0.67);
     }
 
-    &__content {
-        @include fill;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        transition: background-color 0.5s;
+    .link-blocks__description,
+    .link-blocks__link {
+      display: block;
     }
-
-    &__image img {
-        @include fill;
-    }
-
-    &__inner-content {
-        width: 100%;
-    }
-
-    &__name {
-        font-size: 2rem;
-        color: white;
-        text-transform: uppercase;
-        font-family: 'Conv_cafeandbrewery';
-    }
-
-    &__description {
-        color: peachpuff;
-        padding: 1em;
-        display: none;
-    }
-
-    &__link {
-        display: none;
-        color: $color1;
-        transition: color 0.5s;
-
-        &:hover {
-            color: $color3;
-        }
-    }
-
-    &--active {
-
-        .link-blocks__content {
-            background-color: rgba(0, 0, 0, 0.67);
-        }
-
-        .link-blocks__description,
-        .link-blocks__link {
-            display: block;
-        }
-    }
+  }
 }

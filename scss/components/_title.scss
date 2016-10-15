@@ -1,14 +1,9 @@
 .title {
-    font-family: 'Conv_cafeandbrewery';
-    font-size: 2.5rem;
-    margin: 0.5em 0;
-    border-bottom: 1px solid $color5;
+  font-family: 'Conv_cafeandbrewery';
+  font-size: 2rem;
+  margin: 0.5em 0;
 
-    &--center {
-        text-align: center;
-    }
-    
-    @media screen and (min-width: $break-medium) {
-        font-size: 3.5rem;
-    }
+  &--center {
+    text-align: center;
+  }
 }

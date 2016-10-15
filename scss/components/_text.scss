@@ -1,32 +1,35 @@
 .text {
-    font-size: 0.8rem;
-    line-height: 1.5em;
-    margin: 3em 0;
-    text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  margin: 3em 0;
+  text-align: justify;
 
+  &--columns {
     @media screen and (min-width: $break-medium) {
-        font-size: 1rem;
+      column-count: 2;
+      column-gap: 1em;
     }
+  }
 
-    &--columns {
-        @media screen and (min-width: $break-medium) {
-            column-count: 2;
-            column-gap: 1em;
-        }
-    }
+  ul {
+    list-style: circle;
+  }
 
-    ul {
-        list-style: circle;
-    }
+  p {
+    margin-bottom: 1em;
+  }
 
-    p {
-        margin-bottom: 1em;
+  img {
+    border: 1px solid rgb(128, 128, 128);
+    margin: 1em auto;
+    padding: 0.5em;
+    @media screen and (min-width: $break-medium) {
+      width: 50%;
     }
+  }
 
-    img {
-      margin: 1em auto;
-      width: 50%; // @TODO: mobile first.
-      padding: 0.5em;
-      border: 1px solid $color5;
-    }
+  a {
+    color: rgb(210, 105, 90);
+    font-family: 'Conv_Airplanes in the Night Sky';
+  }
 }

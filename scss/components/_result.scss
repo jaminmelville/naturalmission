@@ -1,38 +1,61 @@
 .result {
-  padding:2em;
-  margin:2em 0;
   background-color: $color1;
+  height: 100%;
+  padding: 2em;
+
+  &__list {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__wrapper {
+    flex: 0 0 100%;
+    padding: 1em;
+    @media screen and (min-width: $break-medium) {
+      flex: 0 0 33.3%;
+    }
+  }
 
   &__search {
+    padding: 0 1em;
+    position: relative;
     text-align: center;
   }
 
   &__search-input {
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 1em;
     font-size: 1.5rem;
     line-height: 1.5em;
-    padding: 0 1em;
-    border: 1px solid black;
     margin: 1em 0;
+    padding: 0 1em;
+    width: 100%;
   }
 
   &__search-button {
-    font-size: 1.5rem;
     cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: -0.5em;
+    position: absolute;
+    right: 1em;
+    top: 50%;
     transition: color 0.5s;
+
     &:hover {
-        color: $color3;
+      color: $color3;
     }
   }
 
   &__title {
-    color: $color3;
-    font-size: 1.5rem;
+    color: rgb(210, 105, 90);
+    font-size: 1rem;
     text-transform: uppercase;
   }
 
   &__snippet {
-    margin: 1em 0;
     font-size: 1rem;
     line-height: 1.5em;
+    margin: 1em 0;
   }
 }

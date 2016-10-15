@@ -1,83 +1,97 @@
 .menu {
-    background-color: $color1;
-    width: 100%;
+  background-color: $color1;
+  color: rgb(128, 128, 128);
+  font-family: 'Conv_PRINC___';
+  width: 100%;
 
-    // @TODO: this is wrong. Find a way to add class to menu based on page.
-    &--dark {
-      background-color: $color2;
-      color: $color1;
-    }
+  &--home {
+    background-color: $color5;
+    color: $color1;
+    left: 0;
+    position: absolute;
+    top: 0;
+    @media screen and (min-width: $break-large) {
+      background-color: transparent;
+      bottom: 0;
+      top: auto;
 
-
-    &--bottom {
-        position: absolute;
-        top: 0;
+      &::before {
+        background: linear-gradient(rgba(0, 0, 0, 0), transparentize($color2, 0.75), transparentize($color2, 0.25));
+        bottom: 0;
+        content: '';
+        height: 5em;
         left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+      }
 
-        @media screen and (min-width: $break-large) {
-            top: auto;
-            bottom: 0;
-        }
+      .menu__items {
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.3em;
+    @media screen and (min-width: $break-large) {
+      display: none;
+    }
+  }
+
+  &__items {
+    display: none;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--open {
+      display: block;
+    }
+    @media screen and (min-width: $break-large) {
+      display: block;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 2em;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $color3;
+    }
+    @media screen and (min-width: $break-large) {
+      display: inline-block;
+      margin: 0.7em 2em;
     }
 
-    &__button {
-        cursor: pointer;
-        font-size: 1.5rem;
-        padding: 0.3em;
-        @media screen and (min-width: $break-large) {
-            display: none;
-        }
+    &--search {
+      margin-bottom: 0;
+      margin-top: 0;
+      vertical-align: baseline;
     }
+  }
 
-    &__items {
-        display: none;
-        text-align: center;
-        text-transform: uppercase;
+  &__search-input {
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 1em;
+    font: inherit;
+    line-height: 1.5em;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition: width 0.5s;
+    width: 10em;
 
-        &--open {
-            display: block;
-        }
-
-        @media screen and (min-width: $break-large) {
-            display: block;
-        }
+    &--hidden {
+      border: 0;
+      width: 0;
     }
-
-    &__item {
-        cursor: pointer;
-        font-size: 1.1rem;
-        margin: 2em;
-        transition: color 0.5s;
-
-        &:hover {
-            color: $color3;
-        }
-
-        @media screen and (min-width: $break-large) {
-            display: inline-block;
-            margin: 0.7em 2em;
-        }
-
-        &--search {
-          vertical-align: baseline;
-          margin-top: 0;
-          margin-bottom: 0;
-        }
-    }
-    &__search-input {
-        margin: 0;
-        padding: 0;
-        border: 1px solid $color3;
-        font: inherit;
-        width: 10em;
-        text-transform: uppercase;
-        line-height: 1.5em;
-        transition: width 0.5s;
-        text-align: center;
-        &--hidden {
-          border:none;
-          width: 0px;
-        }
-    }
-
+  }
 }

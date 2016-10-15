@@ -49,6 +49,7 @@
 	__webpack_require__(1);
 	__webpack_require__(5);
 	__webpack_require__(7);
+	__webpack_require__(13);
 	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(11);
@@ -75,17 +76,14 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var randomness = Math.random() * 360;
+	var initialColor = 300;
 
 	function setBackgroundColor() {
-	    var hue = (randomness + (0, _jquery2.default)(window).scrollTop() / (0, _jquery2.default)(window).height() * 60) % 360;
-	    (0, _jquery2.default)('.js-background').css({ 'background-color': 'hsl(' + hue + ', 100%, 90%)' });
+	    var hue = (initialColor + (0, _jquery2.default)(window).scrollTop() / (0, _jquery2.default)(window).height() * 60) % 360;
+	    (0, _jquery2.default)('.js-background').css({ 'background-color': 'hsl(' + hue + ', 100%, 95%)' });
 	}
 
-	(0, _jquery2.default)(window).on('scroll', function () {
-	    // change color at a rate of 60% Hue per window scroll.
-	    setBackgroundColor();
-	});
+	(0, _jquery2.default)(window).on('scroll', setBackgroundColor);
 	setBackgroundColor();
 
 /***/ },
@@ -10872,6 +10870,26 @@
 	    search($input.val());
 	  }
 	});
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _jquery = __webpack_require__(6);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function setLandingOpacity() {
+	    var opacity = 1 - (0, _jquery2.default)(window).scrollTop() / (0, _jquery2.default)(window).height();
+	    (0, _jquery2.default)('.js-landing').css({ opacity: opacity });
+	}
+
+	(0, _jquery2.default)(window).on('scroll', setLandingOpacity);
+	setLandingOpacity();
 
 /***/ }
 /******/ ]);
