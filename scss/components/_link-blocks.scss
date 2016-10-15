@@ -10,13 +10,13 @@
     padding-top: 100%;
     position: relative;
     @media screen and (min-width: $break-medium) {
-      flex: 0 0 $percentage;
       $percentage: 100% / 2;
+      flex: 0 0 $percentage;
       padding-top: $percentage;
     }
     @media screen and (min-width: $break-large) {
-      flex: 0 0 $percentage;
       $percentage: 100% / 3;
+      flex: 0 0 $percentage;
       padding-top: $percentage;
     }
   }
