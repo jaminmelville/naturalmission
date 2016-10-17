@@ -44,34 +44,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-* {
-  box-sizing: border-box; }
-
-a {
-  color: inherit;
-  text-decoration: none; }
-
-body {
-  background-color: #fbfbfb;
-  background-image: url("/themes/custom/naturalmission/images/black-thread-light.png");
-  font-family: 'Conv_PRINC___';
-  overflow-x: hidden;
-  width: 100%; }
-
-.background {
-  background-image: url("/themes/custom/naturalmission/images/black-thread-light.png"); }
-
-img {
-  height: auto;
-  max-width: 100%; }
-
-input:-webkit-autofill,
-input:-webkit-autofill:active,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:hover {
-  -webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
-  -webkit-transition-delay: 9999s; }
-
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2242,6 +2214,29 @@ input:-webkit-autofill:hover {
   overflow: visible;
   clip: auto; }
 
+* {
+  box-sizing: border-box; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+body {
+  background-attachment: fixed;
+  background-color: #fbfbfb;
+  background-image: url("/themes/custom/naturalmission/images/black-thread-light.png");
+  font-family: 'Conv_PRINC___';
+  overflow-x: hidden;
+  width: 100%; }
+
+.background {
+  background-attachment: fixed;
+  background-image: url("/themes/custom/naturalmission/images/black-thread-light.png"); }
+
+img {
+  height: auto;
+  max-width: 100%; }
+
 .about {
   -ms-flex-align: center;
       align-items: center;
@@ -2361,7 +2356,7 @@ input:-webkit-autofill:hover {
   font-size: 1.5rem;
   padding: 1em 0;
   text-align: center; }
-  .file a[href$=".pdf"]:before {
+  .file a[href$='.pdf']::before {
     content: '\F1C1';
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
@@ -2376,8 +2371,8 @@ input:-webkit-autofill:hover {
 .form__element-inner {
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #000000;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1.5rem;
   line-height: 2em;
   padding: 0 1em; }
@@ -2418,10 +2413,6 @@ input:-webkit-autofill:hover {
     position: relative;
     text-align: right;
     width: 100%; }
-    .landing__text--imaged {
-      background-image: url("https://static.pexels.com/photos/625/field-summer-sun-meadow-large.jpg");
-      background-position: center center;
-      background-size: cover; }
     @media screen and (min-width: 768px) {
       .landing__text {
         font-size: 1.5rem;
@@ -2486,12 +2477,20 @@ input:-webkit-autofill:hover {
     display: flex;
     text-align: center;
     transition: background-color 0.5s; }
-  .link-blocks__image img {
+  .link-blocks__image {
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
+    .link-blocks__image img {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      transition: transform 0.5s; }
   .link-blocks__inner-content {
     width: 100%; }
   .link-blocks__name {
@@ -2500,7 +2499,7 @@ input:-webkit-autofill:hover {
     font-size: 1.7rem;
     text-transform: uppercase; }
   .link-blocks__description {
-    color: peachpuff;
+    color: #ffdab9;
     display: none;
     font-size: 1.3rem;
     font-weight: bold; }
@@ -2513,9 +2512,12 @@ input:-webkit-autofill:hover {
       color: #ff863f; }
   .link-blocks--active .link-blocks__content {
     background-color: rgba(0, 0, 0, 0.67); }
-  .link-blocks--active .link-blocks__description,
-  .link-blocks--active .link-blocks__link {
+  .link-blocks--active .link-blocks__description {
     display: block; }
+  .link-blocks--active .link-blocks__link {
+    display: inline-block; }
+  .link-blocks--active .link-blocks__image img {
+    transform: scale(1.1); }
 
 .list {
   -ms-flex-align: stretch;
@@ -2614,9 +2616,9 @@ input:-webkit-autofill:hover {
         margin: 0.7em 2em;
         padding: 0; } }
     .menu__item--search {
-      vertical-align: baseline;
       margin-bottom: 0;
-      margin-top: 0; }
+      margin-top: 0;
+      vertical-align: baseline; }
   .menu__search-input {
     border: 1px solid gray;
     border-radius: 1em;
@@ -2677,7 +2679,7 @@ input:-webkit-autofill:hover {
       padding: 0; } }
 
 .recent__item {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
   font-size: 1rem;
   margin: 1em 0;
   padding: 1em 0;

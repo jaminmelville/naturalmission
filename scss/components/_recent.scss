@@ -33,7 +33,7 @@
   }
 
   &__date {
-    color: rgb(210, 105, 90);
+    color: $color8;
     font-size: 0.8rem;
     margin-top: 0.5em;
     text-transform: uppercase;
@@ -47,7 +47,7 @@
   }
 
   &__item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+    border-bottom: 1px solid transparentize($color2, 0.66);
     font-size: 1rem;
     margin: 1em 0;
     padding: 1em 0;

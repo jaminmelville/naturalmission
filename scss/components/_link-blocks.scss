@@ -29,8 +29,14 @@
     transition: background-color 0.5s;
   }
 
-  &__image img {
+  &__image {
     @include fill;
+    overflow: hidden;
+
+    img {
+      @include fill;
+      transition: transform 0.5s;
+    }
   }
 
   &__inner-content {
@@ -45,7 +51,7 @@
   }
 
   &__description {
-    color: peachpuff;
+    color: $color9;
     display: none;
     font-size: 1.3rem;
     font-weight: bold;
@@ -64,12 +70,21 @@
 
   &--active {
     .link-blocks__content {
-      background-color: rgba(0, 0, 0, 0.67);
+      background-color: transparentize($color2, 0.33);
     }
 
-    .link-blocks__description,
-    .link-blocks__link {
+    .link-blocks__description {
       display: block;
+    }
+
+    .link-blocks__link {
+      display: inline-block;
+    }
+
+    .link-blocks__image {
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 }

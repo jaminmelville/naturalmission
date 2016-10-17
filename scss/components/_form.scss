@@ -6,7 +6,7 @@
   &__element-inner {
     background-color: transparentize($color1, 0.5);
     border: 1px solid $color2;
-    display: flex !important; // @TODO: remove need for important by removing drupal css.
+    display: flex;
     font-size: 1.5rem;
     line-height: 2em;
     padding: 0 1em;

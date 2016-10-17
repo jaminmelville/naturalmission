@@ -12,12 +12,6 @@
     position: relative;
     text-align: right;
     width: 100%;
-
-    &--imaged {
-      background-image: url('https://static.pexels.com/photos/625/field-summer-sun-meadow-large.jpg');
-      background-position: center center;
-      background-size: cover;
-    }
     @media screen and (min-width: $break-medium) {
       font-size: 1.5rem;
       padding: 2em;

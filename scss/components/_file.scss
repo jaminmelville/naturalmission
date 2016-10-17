@@ -4,15 +4,19 @@
   padding: 1em 0;
   text-align: center;
 
-  a[href$=".pdf"]:before {
-    content: '\f1c1';
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    margin: 0 0.5em;
-    text-rendering: auto;
-  }
+  a {
+    &[href$='.pdf'] {
+      &::before {
+        content: '\f1c1';
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        margin: 0 0.5em;
+        text-rendering: auto;
+      }
+    }
 
-  a:hover {
-    color: $color3;
+    &:hover {
+      color: $color3;
+    }
   }
 }
