@@ -1,6 +1,5 @@
 <section class='landing js-landing'>
   <div class='landing__video-wrapper'>
-
     <!-- @TODO: Use the full screen image style for video preview. -->
     <video class='landing__video' poster="{{ file_url(content.field_home_page_video_preview['#items'][0].entity.uri[0].value) }}" autoplay loop muted>
       <source src="{{ file_url(content.field_home_page_video['#items'][0].entity.uri[0].value) }}" type="video/mp4">
@@ -20,35 +19,33 @@
   <!-- @TODO: find a way to get drupal menu in here. -->
   <div class=''>
     <div class='menu menu--home'>
-  <i class="menu__button js-menu-button fa fa-bars" aria-hidden="true"></i>
-              <ul class='menu__items'>
-              <li class='menu__item js-menu__item'>
-        <a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
-              </li>
-          <li class='menu__item js-menu__item'>
-        <a href="/#about" data-drupal-link-system-path="&lt;front&gt;">About</a>
-              </li>
-          <li class='menu__item js-menu__item'>
-        <a href="/#services" data-drupal-link-system-path="&lt;front&gt;">Services</a>
-              </li>
-          <li class='menu__item js-menu__item'>
-        <a href="/#resources" data-drupal-link-system-path="&lt;front&gt;">Resources</a>
-              </li>
-          <li class='menu__item js-menu__item'>
-        <a href="/articles" data-drupal-link-system-path="articles">Articles</a>
-              </li>
-          <li class='menu__item js-menu__item'>
-        <a href="/#contact" data-drupal-link-system-path="&lt;front&gt;">Contact</a>
-              </li>
-              <li class='menu__item menu__item--search js-search'>
-                <input class='js-search__input menu__search-input menu__search-input--hidden' name='keys' type='text/javascript' />
-                <i class='js-search__button js-menu__search-button menu__search-button fa fa-search'></i>
-              </li>
-        </ul>
-
-      </div>
+      <i class="menu__button js-menu-button fa fa-bars" aria-hidden="true"></i>
+      <ul class='menu__items'>
+        <li class='menu__item js-menu__item'>
+          <a href="/">Home</a>
+        </li>
+        <li class='menu__item js-menu__item'>
+          <a href="/#about">About</a>
+        </li>
+        <li class='menu__item js-menu__item'>
+          <a href="/#services">Services</a>
+        </li>
+        <li class='menu__item js-menu__item'>
+          <a href="/#resources">Resources</a>
+        </li>
+        <li class='menu__item js-menu__item'>
+          <a href="/articles">Articles</a>
+        </li>
+        <li class='menu__item js-menu__item'>
+          <a href="/#contact">Contact</a>
+        </li>
+        <li class='menu__item menu__item--search js-search'>
+          <input class='js-search__input menu__search-input menu__search-input--hidden' name='keys' type='text/javascript' />
+          <i class='js-search__button js-menu__search-button menu__search-button fa fa-search'></i>
+        </li>
+      </ul>
+    </div>
   </div>
-
 </section>
 
 <section class='section' id='about'>
@@ -71,7 +68,8 @@
 
 <section class='section section--full-height' id='services'>
   <div class='section__content'>
-    <h3 class='title'>Services</h3> {{ content.field_home_page_services }}
+    <h3 class='title'>Services</h3>
+    {{ content.field_home_page_services }}
   </div>
 </section>
 
