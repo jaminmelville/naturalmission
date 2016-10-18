@@ -1,5 +1,5 @@
 {% for item in items %}
-  <a href="skype:{{ item.content['#context'].value }}?call">
+  <a class='js-map-link' target='_blank'>
     {{ item.content }}
   </a>
 {% endfor %}

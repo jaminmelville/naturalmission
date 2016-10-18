@@ -25,7 +25,6 @@
         "drupal/paragraphs": "^8.1",
         "symfony/dom-crawler": "2.8.11",
         "drupal/pathauto": "8.*",
-        "drupal/disqus": "8.*",
         "drupal/metatag": "8.*",
         "drupal/google_analytics": "8.*"
     },

@@ -1,5 +1,5 @@
 {% for item in items %}
-  <a href="skype:{{ item.content['#context'].value }}?call">
+  <a href="tel:{{ item.content['#context'].value }}">
     {{ item.content }}
   </a>
 {% endfor %}

@@ -41,7 +41,6 @@ dependencies:
   - google_analytics
   - metatag
   - metatag_open_graph
-# @TODO: when it's working:  - disqus
 themes:
   - naturalmission
   - seven
