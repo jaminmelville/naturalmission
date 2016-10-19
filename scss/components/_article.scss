@@ -6,13 +6,12 @@
   }
 
   &__author {
-    font-size: 1.2rem;
+    font-size: $font-medium;
     text-transform: uppercase;
   }
 
   &__date {
     color: $color8;
-    font-size: 1rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
   }
 }

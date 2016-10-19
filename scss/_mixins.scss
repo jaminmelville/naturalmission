@@ -5,3 +5,26 @@
   top: 0;
   width: 100%;
 }
+@mixin hover {
+  transition: color 0.5s;
+
+  &:hover {
+    color: $color3;
+  }
+}
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+@mixin icon($icon) {
+  &::before {
+    content: $icon;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    margin: 0 0.75rem;
+    text-rendering: auto;
+  }
+}

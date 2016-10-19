@@ -22,29 +22,44 @@
     flex: 0 0 100%;
     flex-wrap: wrap;
     @media screen and (min-width: $break-medium) {
-      flex: 0 1 1em;
-      padding: 0 2em;
+      flex: 0 1 1rem;
+      padding: 0 2rem;
     }
   }
 
   &__values {
     flex: 1 1 100%;
     @media screen and (min-width: $break-medium) {
-      padding: 0 2em;
+      padding: 0 2rem;
     }
   }
 
   &__option {
+    @include hover;
     cursor: pointer;
     flex: 0 0 25%;
     font-size: 2.5rem;
-    padding: 0.2em 0;
+    padding: 0.5rem 0;
     pointer-events: all;
     text-align: center;
-    transition: color 0.5s;
 
-    &--selected,
-    &:hover {
+    &--skype {
+      @include icon($icon-skype);
+    }
+
+    &--envelope {
+      @include icon($icon-envelope);
+    }
+
+    &--phone {
+      @include icon($icon-phone);
+    }
+
+    &--map-marker {
+      @include icon($icon-map-marker);
+    }
+
+    &--selected {
       color: $color3;
     }
     @media screen and (min-width: $break-medium) {
@@ -55,9 +70,9 @@
   &__value {
     background-color: transparentize($color1, 0.5);
     display: none;
-    font-size: 1.5rem;
-    margin: 1em 0;
-    padding: 2em 1em;
+    font-size: $font-large;
+    margin: 1.5rem 0;
+    padding: 3rem 1.5rem;
     pointer-events: all;
 
     &--selected {
@@ -65,11 +80,7 @@
     }
 
     a {
-      transition: color 0.5s;
-
-      &:hover {
-        color: $color3;
-      }
+      @include hover;
     }
   }
 }

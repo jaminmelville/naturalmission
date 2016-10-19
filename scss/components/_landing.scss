@@ -7,23 +7,19 @@
   &__text {
     background-color: transparentize($color2, 0.5);
     color: $color1;
-    font-size: 1rem;
-    padding: 2em 0.5em;
+    padding: 2rem 0.5rem;
     position: relative;
     text-align: right;
     width: 100%;
     @media screen and (min-width: $break-medium) {
-      font-size: 1.5rem;
-      padding: 2em;
+      font-size: $font-large;
+      padding: 3rem;
     }
   }
 
   &__title {
     font-family: 'Conv_cafeandbrewery';
-    font-size: 2.7em;
-    @media screen and (min-width: $break-medium) {
-      font-size: 2.79em;
-    }
+    font-size: 2.79em;
   }
 
   &__subtitle {

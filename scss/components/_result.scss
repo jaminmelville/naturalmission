@@ -1,7 +1,7 @@
 .result {
   background-color: $color1;
   height: 100%;
-  padding: 2em;
+  padding: 2rem;
 
   &__list {
     align-items: stretch;
@@ -11,7 +11,7 @@
 
   &__wrapper {
     flex: 0 0 100%;
-    padding: 1em;
+    padding: 1rem;
     @media screen and (min-width: $break-medium) {
       flex: 0 0 50%;
     }
@@ -21,7 +21,7 @@
   }
 
   &__search {
-    padding: 0 1em;
+    padding: 0 1rem;
     position: relative;
     text-align: center;
   }
@@ -30,37 +30,34 @@
     border: 1px solid $color4;
     border-radius: 1em;
     color: $color5;
-    font-size: 1.5rem;
+    font-size: $font-large;
     line-height: 1.5em;
-    margin: 1em 0;
-    padding: 0 1em;
+    margin: 1.5rem 0;
+    padding: 0 1.5rem;
     width: 100%;
   }
 
   &__search-button {
+    @include icon($icon-search);
+    @include hover;
     cursor: pointer;
-    font-size: 1.5rem;
-    margin-top: -0.5em;
+    font-size: $font-large;
+    margin-top: -0.75rem;
     position: absolute;
-    right: 1em;
+    right: 1.5rem;
     top: 50%;
-    transition: color 0.5s;
-
-    &:hover {
-      color: $color3;
-    }
   }
 
   &__title {
     color: $color8;
-    font-size: 1.1rem;
+    font-size: $font-small;
     font-weight: bold;
     text-transform: uppercase;
   }
 
   &__snippet {
-    font-size: 1.1rem;
+    font-size: $font-small;
     line-height: 1.5em;
-    margin: 1em 0;
+    margin: 1rem 0;
   }
 }

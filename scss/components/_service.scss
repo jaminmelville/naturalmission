@@ -1,6 +1,6 @@
 .service {
   flex: 0 0 100%;
-  padding-bottom: 2em;
+  padding-bottom: 2rem;
 
   &:last-child {
     padding-bottom: 0;
@@ -8,28 +8,28 @@
   @media screen and (min-width: $break-medium) {
     $percentage: 100% / 2;
     flex: 0 0 $percentage;
-    padding: 0 1em;
+    padding: 0 1rem;
   }
   @media screen and (min-width: $break-large) {
     $percentage: 100% / 3;
     flex: 0 0 $percentage;
-    padding: 0 1em;
+    padding: 0 1rem;
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 -1em;
+    margin: 0 -1rem;
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: $font-xlarge;
     text-align: center;
   }
 
   &__icon {
-    margin: 2em auto;
+    margin: 2rem auto;
     width: 50%;
   }
 }

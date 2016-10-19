@@ -53,19 +53,17 @@
   &__description {
     color: $color9;
     display: none;
-    font-size: 1.3rem;
+    font-size: $font-medium;
     font-weight: bold;
   }
 
   &__link {
+    @include hover;
+    @include icon($icon-link);
     color: $color1;
     display: none;
-    padding: 1em;
-    transition: color 0.5s;
-
-    &:hover {
-      color: $color3;
-    }
+    font-size: 3rem;
+    padding: 1rem;
   }
 
   &--active {
