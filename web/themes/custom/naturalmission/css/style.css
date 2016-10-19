@@ -290,14 +290,16 @@ body,
   font-size: 1.5rem;
   padding: 1em 0;
   text-align: center; }
-  .file a[href$='.pdf']::before {
-    content: "\F1C1";
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    margin: 0 0.75rem;
-    text-rendering: auto; }
-  .file a:hover {
-    color: #ff863f; }
+  .file a {
+    transition: color 0.5s; }
+    .file a:hover {
+      color: #ff863f; }
+    .file a[href$='.pdf']::before {
+      content: "\F1C1";
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      margin: 0 0.75rem;
+      text-rendering: auto; }
 
 .form__element {
   margin: 1.5em 0; }
@@ -308,7 +310,7 @@ body,
   display: -ms-flexbox;
   display: flex;
   font-size: 1.5rem;
-  line-height: 3rem;
+  line-height: 1.5em;
   padding: 0 1.5rem; }
 
 .form__label {
@@ -320,7 +322,7 @@ body,
   border: 0;
   font-family: inherit;
   font-size: 1.5rem;
-  line-height: 3rem;
+  line-height: 1.5em;
   outline: none;
   padding-left: 1.5rem; }
   .form__input--bordered {
@@ -481,13 +483,16 @@ body,
     background-color: #ffffff;
     padding: 0 1rem; }
   .list__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.5s;
     background-color: #ffffff;
     display: block;
     font-size: 1.5rem;
-    overflow: hidden;
-    padding: 0.75rem;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
+    padding: 0.75rem; }
+    .list__title:hover {
+      color: #ff863f; }
   .list__text {
     background-color: #ffffff;
     font-size: 1.1rem;

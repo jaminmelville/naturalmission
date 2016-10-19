@@ -31,7 +31,7 @@
     border-radius: 1em;
     color: $color5;
     font-size: $font-large;
-    line-height: 1.5em;
+    line-height: $line-height-medium;
     margin: 1.5rem 0;
     padding: 0 1.5rem;
     width: 100%;
@@ -57,7 +57,7 @@
 
   &__snippet {
     font-size: $font-small;
-    line-height: 1.5em;
+    line-height: $line-height-medium;
     margin: 1rem 0;
   }
 }

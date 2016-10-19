@@ -22,19 +22,18 @@
   }
 
   &__title {
+    @include ellipse;
+    @include hover;
     background-color: $color1;
     display: block;
     font-size: $font-large;
-    overflow: hidden;
     padding: 0.75rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   &__text {
     background-color: $color1;
     font-size: $font-small;
-    line-height: 1.5em;
+    line-height: $line-height-medium;
     padding: 1rem;
     text-align: justify;
   }

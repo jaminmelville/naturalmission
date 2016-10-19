@@ -1,6 +1,6 @@
 .text {
   font-size: $font-small;
-  line-height: 1.5em;
+  line-height: $line-height-medium;
   text-align: justify;
 
   &--columns {

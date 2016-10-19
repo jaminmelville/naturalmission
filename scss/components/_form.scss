@@ -8,7 +8,7 @@
     border: 1px solid $color2;
     display: flex;
     font-size: $font-large;
-    line-height: 3rem;
+    line-height: $line-height-medium;
     padding: 0 1.5rem;
   }
 
@@ -22,7 +22,7 @@
     border: 0;
     font-family: inherit;
     font-size: $font-large;
-    line-height: 3rem;
+    line-height: $line-height-medium;
     outline: none;
     padding-left: 1.5rem;
 
