@@ -532,6 +532,12 @@ body,
     cursor: pointer;
     font-size: 1.5rem;
     padding: 0.45rem; }
+    .menu__button::before {
+      content: "\F0C9";
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      margin: 0 0.75rem;
+      text-rendering: auto; }
     @media screen and (min-width: 992px) {
       .menu__button {
         display: none; } }

@@ -34,6 +34,7 @@
   }
 
   &__button {
+    @include icon($icon-bars);
     cursor: pointer;
     font-size: $font-large;
     padding: 0.45rem;

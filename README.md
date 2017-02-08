@@ -36,3 +36,15 @@ make copies of the .dist files in the root removing the dist extension and set c
 ```gulp install```
 
 Then boom, go to the localhost:PORT_NUMBER and you should be away laughing.
+
+Server install for digital ocean:
+apt install docker docker-compose nginx git npm nodejs-legacy
+mkdir /code
+git clone git@github.com:jaminmelville/naturalmission.git /code/naturalmission.com.au
+cd /code/naturalmission.com.au/
+npm install
+npm install -g gulp
+cp docker-compose.yml.dist docker-compose.yml
+cp drupal.config.json.dist drupal.config.json
+gulp install
+gulp load (optional)

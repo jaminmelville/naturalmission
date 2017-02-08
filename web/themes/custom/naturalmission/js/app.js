@@ -47,13 +47,13 @@
 	'use strict';
 
 	__webpack_require__(1);
-	__webpack_require__(4);
-	__webpack_require__(6);
+	__webpack_require__(5);
 	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(9);
-	__webpack_require__(11);
+	__webpack_require__(10);
 	__webpack_require__(12);
+	__webpack_require__(13);
 
 /***/ },
 /* 1 */
@@ -64,12 +64,13 @@
 /***/ },
 /* 2 */,
 /* 3 */,
-/* 4 */
+/* 4 */,
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -86,7 +87,7 @@
 	setBackgroundColor();
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10312,12 +10313,12 @@
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -10343,12 +10344,12 @@
 	});
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -10363,12 +10364,12 @@
 	setLandingOpacity();
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -10406,18 +10407,18 @@
 	});
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var GoogleMapsLoader = __webpack_require__(10);
+	var GoogleMapsLoader = __webpack_require__(11);
 
 	GoogleMapsLoader.KEY = 'AIzaSyDId3kWjcDVdlFOzosFkm78XaFAH8PWiYQ';
 
@@ -10593,7 +10594,7 @@
 	        };
 	        var map = new google.maps.Map((0, _jquery2.default)('.js-map')[0], mapProperties);
 
-	        _jquery2.default.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + window.address, function (data) {
+	        _jquery2.default.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + window.address, function (data) {
 	            var position = new google.maps.LatLng(data.results[0].geometry.location.lat, data.results[0].geometry.location.lng);
 
 	            map.setCenter(position);
@@ -10610,7 +10611,7 @@
 	}
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
@@ -10835,12 +10836,12 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -10876,12 +10877,12 @@
 	});
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(6);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 

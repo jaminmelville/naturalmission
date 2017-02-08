@@ -176,7 +176,7 @@ if ($('.js-map')[0]) {
         }
         var map = new google.maps.Map($('.js-map')[0], mapProperties)
 
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + window.address, (data) => {
+        $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + window.address, (data) => {
             let position = new google.maps.LatLng(
                 data.results[0].geometry.location.lat,
                 data.results[0].geometry.location.lng
