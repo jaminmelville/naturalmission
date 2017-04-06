@@ -9,15 +9,28 @@
     color: $color1;
     padding: 2rem 0.5rem;
     position: relative;
-    text-align: right;
+    text-align: center;
     width: 100%;
     @media screen and (min-width: $break-medium) {
       font-size: $font-large;
       padding: 3rem;
+      text-align: right;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto 1em;
+    width: 50px;
+    @media screen and (min-width: $break-medium) {
+      margin-bottom: -1.8em;
+      margin-right: 0.5em;
+      margin-top: -2em;
+      width: 100px;
     }
   }
 
   &__title {
+    display: inline-block;
     font-family: 'Conv_cafeandbrewery';
     font-size: 2.79em;
   }
