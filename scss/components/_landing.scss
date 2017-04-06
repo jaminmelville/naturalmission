@@ -19,9 +19,11 @@
   }
 
   &__logo {
+    display: block;
     margin: 0 auto 1em;
     width: 50px;
     @media screen and (min-width: $break-medium) {
+      display: inline-block;
       margin-bottom: -1.8em;
       margin-right: 0.5em;
       margin-top: -2em;
