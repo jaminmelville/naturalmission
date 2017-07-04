@@ -36,6 +36,7 @@
   &__button {
     @include icon($icon-bars);
     cursor: pointer;
+    display: inline-block;
     font-size: $font-large;
     padding: 0.45rem;
     @media screen and (min-width: $break-large) {

@@ -1,0 +1,8 @@
+<div class="recipe__heading">{{ label }}</div>
+<ul class="recipe__list">
+  {% for item in items %}
+    <li>
+      {{ item.content }}
+    </li>
+  {% endfor %}
+</ul>

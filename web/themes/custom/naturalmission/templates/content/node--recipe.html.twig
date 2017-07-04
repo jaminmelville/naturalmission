@@ -1,0 +1,40 @@
+<article class='article'>
+  <div class='article__image'>
+    {{ content.field_image }}
+  </div>
+  <div class='article__content'>
+    <div class='article__author'>
+      Recipe by
+      {{ author_name }}
+    </div>
+    <div class='article__date'>
+      {% set createdDate = node.getCreatedTime | date('j F Y') %}
+      {{ createdDate }}
+    </div>
+    <div class='text'>
+      {{ content.field_recipe_description }} 
+      <div class='recipe__row'>
+        <div class='recipe__column'>    
+          {{ content.field_recipe_ingredients }}
+        </div>
+        <div class='recipe__column'> 
+          {{ content.field_recipe_serves }}
+        </div>
+      </div>
+      {{ content.field_recipe_instructions }}
+    </div>
+  </div>
+</article>
+<div class='disqus' id='disqus_thread'></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = drupalSettings.path.currentPath;
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//naturalmission.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

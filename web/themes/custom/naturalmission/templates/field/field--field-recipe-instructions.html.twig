@@ -1,0 +1,9 @@
+<div class="recipe__heading">{{ label }}</div>
+<ol class="recipe__list">
+  {% for item in items %}
+    <li>
+      <div class='recipe__instruction-step'>Step {{ loop.index }}</div> 
+      {{ item.content }}
+    </li>
+  {% endfor %}
+</ol>

@@ -1,0 +1,35 @@
+.recipe {
+    &__heading {        
+      font-size: $font-large;
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+      &--inline {
+        display: inline-block;
+      }
+    }
+    &__list {
+       padding-bottom: 1em;
+    }
+    
+    &__row {
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
+    &__column {
+      width: 100%;
+    }
+    @media screen and (min-width: $break-large) {
+      &__column {
+        width: 50%;
+      }
+    }
+    &__instruction-step {
+      color: #d2695a;
+      font-family: 'Conv_Airplanes in the Night Sky';
+      font-size: $font-xsmall;
+      display: inline-block;
+    }
+    &__description {
+        padding-bottom: 1em;
+    }
+}

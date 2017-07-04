@@ -1,7 +1,7 @@
 .link-blocks {
   align-items: center;
   background-color: $color2;
-  background-image: url('/themes/custom/naturalmission/images/$color2-thread-light.png');
+  background-image: url('/themes/custom/naturalmission/images/black-thread-light.png');
   display: flex;
   flex-wrap: wrap;
 
@@ -22,8 +22,9 @@
   }
 
   &__content {
-    @include fill;
+    @include fill;    
     align-items: center;
+    background-color: transparentize($color2, 0.8);
     display: flex;
     text-align: center;
     transition: background-color 0.5s;
