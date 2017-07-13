@@ -10637,8 +10637,6 @@
 	                map: map,
 	                icon: '/themes/custom/naturalmission/images/pin.png'
 	            });
-
-	            (0, _jquery2.default)('.js-map-link').attr('href', 'https://www.google.com.au/maps/@' + data.results[0].geometry.location.lat + ',' + data.results[0].geometry.location.lng + ',17.86z');
 	        });
 	    });
 	}
