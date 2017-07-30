@@ -19,11 +19,9 @@
   }
 
   img {
-    border: 1px solid $color6;
-    margin: 1rem auto;
-    padding: 0.5rem;
+    vertical-align: text-top;
     @media screen and (min-width: $break-medium) {
-      width: 50%;
+      max-width: 50%;
     }
   }
 
