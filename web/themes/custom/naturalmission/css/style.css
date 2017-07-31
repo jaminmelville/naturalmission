@@ -506,7 +506,7 @@ body,
             flex: 0 0 33%; } }
   .list__image {
     background-color: #ffffff;
-    padding: 0 1rem; }
+    padding: 0 1rem 1rem; }
   .list__title {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -522,8 +522,9 @@ body,
     background-color: #ffffff;
     font-size: 1.1rem;
     line-height: 1.5em;
-    padding: 1rem;
-    text-align: justify; }
+    padding: 0 1rem 1rem;
+    text-align: justify;
+    height: 6.25em; }
 
 .menu {
   background-color: #ffffff;

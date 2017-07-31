@@ -18,7 +18,7 @@
 
   &__image {
     background-color: $color1;
-    padding: 0 1rem;
+    padding: 0 1rem 1rem;
   }
 
   &__title {
@@ -34,7 +34,8 @@
     background-color: $color1;
     font-size: $font-small;
     line-height: $line-height-medium;
-    padding: 1rem;
+    padding: 0 1rem 1rem;
     text-align: justify;
+    height: 6.25em;
   }
 }
