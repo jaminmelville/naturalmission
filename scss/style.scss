@@ -11,6 +11,10 @@ body {
   margin: 0 auto;
 }
 
+::selection {
+  background: $color3;
+}
+
 strong {
   font-weight: bold;
 }

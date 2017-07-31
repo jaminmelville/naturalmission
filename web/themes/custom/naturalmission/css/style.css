@@ -140,6 +140,12 @@ body {
   max-width: 1920px;
   margin: 0 auto; }
 
+::-moz-selection {
+  background: #8b49ff; }
+
+::selection {
+  background: #8b49ff; }
+
 strong {
   font-weight: bold; }
 
@@ -250,7 +256,7 @@ body,
   pointer-events: all;
   text-align: center; }
   .contact__option:hover {
-    color: #ff863f; }
+    color: #8b49ff; }
   .contact__option--skype::before {
     content: "\F17E";
     font: normal normal normal 14px/1 FontAwesome;
@@ -276,7 +282,7 @@ body,
     margin: 0 0.75rem;
     text-rendering: auto; }
   .contact__option--selected {
-    color: #ff863f; }
+    color: #8b49ff; }
   @media screen and (min-width: 768px) {
     .contact__option {
       -ms-flex: 0 0 100%;
@@ -294,7 +300,7 @@ body,
   .contact__value a {
     transition: color 0.5s; }
     .contact__value a:hover {
-      color: #ff863f; }
+      color: #8b49ff; }
 
 .file {
   display: block;
@@ -304,7 +310,7 @@ body,
   .file a {
     transition: color 0.5s; }
     .file a:hover {
-      color: #ff863f; }
+      color: #8b49ff; }
     .file a[href$='.pdf']::before {
       content: "\F1C1";
       font: normal normal normal 14px/1 FontAwesome;
@@ -467,7 +473,7 @@ body,
     font-size: 3rem;
     padding: 1rem; }
     .link-blocks__link:hover {
-      color: #ff863f; }
+      color: #8b49ff; }
     .link-blocks__link::before {
       content: "\F0C1";
       font: normal normal normal 14px/1 FontAwesome;
@@ -517,7 +523,7 @@ body,
     font-size: 1.5rem;
     padding: 0.75rem; }
     .list__title:hover {
-      color: #ff863f; }
+      color: #8b49ff; }
   .list__text {
     background-color: #ffffff;
     font-size: 1.1rem;
@@ -578,12 +584,11 @@ body,
       .menu__items {
         display: block; } }
   .menu__item {
-    transition: color 0.5s;
     cursor: pointer;
     font-size: 1.2rem;
     padding: 1rem; }
     .menu__item:hover {
-      color: #ff863f; }
+      color: #ccafff; }
     .menu__item:hover {
       font-weight: bold; }
     @media screen and (min-width: 992px) {
@@ -647,7 +652,7 @@ body,
   transition: color 0.5s;
   font-size: 1.1rem; }
   .recent__item-title:hover {
-    color: #ff863f; }
+    color: #8b49ff; }
 
 .recent__date {
   color: #d2695a;
@@ -798,7 +803,7 @@ body,
       margin: 0 0.75rem;
       text-rendering: auto; }
     .result__search-button:hover {
-      color: #ff863f; }
+      color: #8b49ff; }
   .result__title {
     color: #d2695a;
     font-size: 1.1rem;

@@ -58,7 +58,9 @@
   }
 
   &__item {
-    @include hover;
+    &:hover {
+      color: lighten($color3, 20%);
+    }
     cursor: pointer;
     font-size: $font-medium;
     padding: 1rem;
