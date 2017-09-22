@@ -1,8 +1,15 @@
 <section class='landing js-landing'>
   <div class='landing__video-wrapper'>
     <!-- @TODO: Use the full screen image style for video preview. -->
-    <video class='landing__video' poster="{{ file_url(content.field_home_page_video_preview['#items'][0].entity.uri[0].value) }}" autoplay loop muted>
-      <source src="https://s3-ap-southeast-2.amazonaws.com/missioncode.com.au/Nature.mp4" type="video/mp4">
+    <video
+      class='landing__video'
+      poster="{{ file_url(content.field_home_page_video_preview['#items'][0].entity.uri[0].value) }}"
+      autoplay
+      loop
+      muted
+      playsInline
+    >
+      <source src="https://s3-ap-southeast-2.amazonaws.com/missioncode.com.au/naturalmission.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
