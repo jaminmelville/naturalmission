@@ -38,7 +38,7 @@ make copies of the .dist files in the root removing the dist extension and set c
 Then boom, go to the localhost:PORT_NUMBER and you should be away laughing.
 
 Server install for digital ocean:
-apt install docker docker-compose nginx git npm nodejs-legacy
+apt install docker docker-compose nginx git npm nodejs-legacy build-essential
 mkdir /code
 git clone git@github.com:jaminmelville/naturalmission.git /code/naturalmission.com.au
 cd /code/naturalmission.com.au/

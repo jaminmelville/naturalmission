@@ -4,7 +4,8 @@
   "description": "Natural Mission Web",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "./node_modules/gulp/bin/gulp.js"
   },
   "author": "Ben Melville",
   "license": "ISC",
@@ -12,7 +13,7 @@
     "async": "^2.0.1",
     "browser-sync": "^2.17.0",
     "dotdotdot": "^1.7.0",
-    "gulp": "github:gulpjs/gulp",
+    "gulp": "^3.9.1",
     "run-sequence": "^1.2.2",
     "sass-lint": "^1.10.2"
   },

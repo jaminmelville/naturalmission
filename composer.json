@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packagist.drupal-composer.org"
+            "url": "https://packages.drupal.org/8"
         }
     ],
     "require": {
@@ -26,7 +26,8 @@
         "symfony/dom-crawler": "2.8.11",
         "drupal/pathauto": "8.*",
         "drupal/metatag": "8.*",
-        "drupal/google_analytics": "8.*"
+        "drupal/google_analytics": "8.*",
+        "drupal/simple_sitemap": "^2.12"
     },
     "require-dev": {
         "behat/mink": "~1.7",
