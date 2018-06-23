@@ -21,6 +21,13 @@
     padding: 0 1rem 1rem;
   }
 
+  &__tags {
+    height: 2em;
+    background-color: white;
+    padding: 1em;
+    padding-top: 0;
+  }
+
   &__title {
     @include ellipse;
     @include hover;
